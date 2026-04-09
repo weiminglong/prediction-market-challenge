@@ -9,3 +9,4 @@ venv/
 .coverage
 htmlcov/
 *.egg-info/
+.worktrees/

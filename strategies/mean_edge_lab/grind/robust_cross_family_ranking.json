@@ -1,0 +1,170 @@
+[
+  {
+    "path": "strategies/mean_edge_lab/grind/trend_shock_candidates/strategy_rank01_p6.810936.py",
+    "robust_mean_edge": 9.713523,
+    "robust_edge_stddev": 2.100414479474151,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 6.810936,
+        "mean_retail_edge": 21.655225,
+        "mean_arb_edge": -14.844289,
+        "mean_final_wealth": 1006.592929
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 11.711491,
+        "mean_retail_edge": 29.203047,
+        "mean_arb_edge": -17.491557,
+        "mean_final_wealth": 1011.419338
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 10.618142,
+        "mean_retail_edge": 26.038577,
+        "mean_arb_edge": -15.420435,
+        "mean_final_wealth": 1010.95219
+      }
+    ]
+  },
+  {
+    "path": "strategies/mean_edge_lab/grind/trend_shock_candidates/strategy_rank03_p6.305096.py",
+    "robust_mean_edge": 8.609211666666667,
+    "robust_edge_stddev": 1.690111695373284,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 6.305096,
+        "mean_retail_edge": 14.724615,
+        "mean_arb_edge": -8.419519,
+        "mean_final_wealth": 1006.148164
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 10.311728,
+        "mean_retail_edge": 19.342472,
+        "mean_arb_edge": -9.030743,
+        "mean_final_wealth": 1010.0967
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 9.210811,
+        "mean_retail_edge": 17.730593,
+        "mean_arb_edge": -8.519782,
+        "mean_final_wealth": 1009.479965
+      }
+    ]
+  },
+  {
+    "path": "strategies/mean_edge_lab/grind/trend_shock_candidates/strategy_rank02_p6.394398.py",
+    "robust_mean_edge": 8.367147333333333,
+    "robust_edge_stddev": 1.4808125352407788,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 6.394398,
+        "mean_retail_edge": 16.692467,
+        "mean_arb_edge": -10.298069,
+        "mean_final_wealth": 1006.310955
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 9.96213,
+        "mean_retail_edge": 21.942322,
+        "mean_arb_edge": -11.980192,
+        "mean_final_wealth": 1009.867639
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 8.744914,
+        "mean_retail_edge": 19.490838,
+        "mean_arb_edge": -10.745923,
+        "mean_final_wealth": 1008.917574
+      }
+    ]
+  },
+  {
+    "path": "strategies/mean_edge_lab/grind/no_cd_no_mom_candidates/strategy_rank02_p5.245663.py",
+    "robust_mean_edge": 8.097381333333333,
+    "robust_edge_stddev": 2.143216588626285,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 5.245663,
+        "mean_retail_edge": 18.217813,
+        "mean_arb_edge": -12.972151,
+        "mean_final_wealth": 1004.941376
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 10.412534,
+        "mean_retail_edge": 24.789986,
+        "mean_arb_edge": -14.377451,
+        "mean_final_wealth": 1010.304982
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 8.633947,
+        "mean_retail_edge": 21.730966,
+        "mean_arb_edge": -13.09702,
+        "mean_final_wealth": 1008.829404
+      }
+    ]
+  },
+  {
+    "path": "strategies/mean_edge_lab/grind/no_cd_no_mom_candidates/strategy_rank01_p5.357682.py",
+    "robust_mean_edge": 7.918725,
+    "robust_edge_stddev": 1.9132030625181082,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 5.357682,
+        "mean_retail_edge": 18.833758,
+        "mean_arb_edge": -13.476076,
+        "mean_final_wealth": 1004.785137
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 9.955099,
+        "mean_retail_edge": 24.803219,
+        "mean_arb_edge": -14.848121,
+        "mean_final_wealth": 1009.690733
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 8.443394,
+        "mean_retail_edge": 22.589796,
+        "mean_arb_edge": -14.146403,
+        "mean_final_wealth": 1008.803494
+      }
+    ]
+  },
+  {
+    "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_cd_no_mom.py",
+    "robust_mean_edge": 7.118157,
+    "robust_edge_stddev": 1.7093558771402753,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 4.810278,
+        "mean_retail_edge": 16.805897,
+        "mean_arb_edge": -11.995619,
+        "mean_final_wealth": 1004.435633
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 8.895087,
+        "mean_retail_edge": 21.804581,
+        "mean_arb_edge": -12.909494,
+        "mean_final_wealth": 1008.714197
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 7.649106,
+        "mean_retail_edge": 20.039949,
+        "mean_arb_edge": -12.390844,
+        "mean_final_wealth": 1008.049139
+      }
+    ]
+  }
+]

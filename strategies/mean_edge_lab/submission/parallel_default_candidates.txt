@@ -1,0 +1,10 @@
+# Default candidate list for cross-agent benchmarking.
+# One strategy path per line.
+
+strategies/mean_edge_lab/submission/strategy_round4_best_standalone.py
+strategies/mean_edge_lab/submission/strategy_best_local_trend_standalone.py
+strategies/mean_edge_lab/submission/strategy_tuned_trend_shock_standalone.py
+strategies/mean_edge_lab/team_round4/strategy_team_f1_regime_hysteresis.py
+strategies/mean_edge_lab/team_round4/strategy_team_f2_quote_inertia.py
+strategies/mean_edge_lab/team_round4/strategy_team_f3_jump_detector.py
+strategies/mean_edge_lab/team_round4/strategy_team_f4_convex_inventory.py

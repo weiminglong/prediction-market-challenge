@@ -1,0 +1,1334 @@
+{
+  "screen_simulations": 60,
+  "robust_simulations": 200,
+  "workers": 8,
+  "candidate_count": 97,
+  "screen_results": [
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_cd_no_mom.py",
+      "name": "hunt_arch_no_cd_no_mom.py",
+      "screen_mean_edge": 7.671586,
+      "screen_mean_retail_edge": 20.992162,
+      "screen_mean_arb_edge": -13.320576,
+      "screen_mean_final_wealth": 1006.671123,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_cooldown.py",
+      "name": "hunt_arch_no_cooldown.py",
+      "screen_mean_edge": 7.303076,
+      "screen_mean_retail_edge": 21.258934,
+      "screen_mean_arb_edge": -13.955858,
+      "screen_mean_final_wealth": 1006.483688,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_best_v4.py",
+      "name": "hunt_arch_best_v4.py",
+      "screen_mean_edge": 6.571419,
+      "screen_mean_retail_edge": 20.629749,
+      "screen_mean_arb_edge": -14.058331,
+      "screen_mean_final_wealth": 1005.717673,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_cd_no_fb_no_mom.py",
+      "name": "hunt_arch_no_cd_no_fb_no_mom.py",
+      "screen_mean_edge": 6.397165,
+      "screen_mean_retail_edge": 18.498125,
+      "screen_mean_arb_edge": -12.10096,
+      "screen_mean_final_wealth": 1005.305967,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_best_v2.py",
+      "name": "hunt_arch_best_v2.py",
+      "screen_mean_edge": 6.2393,
+      "screen_mean_retail_edge": 21.197541,
+      "screen_mean_arb_edge": -14.958241,
+      "screen_mean_final_wealth": 1005.47305,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_12.py",
+      "name": "hunt_extreme_12.py",
+      "screen_mean_edge": 4.787616,
+      "screen_mean_retail_edge": 17.207844,
+      "screen_mean_arb_edge": -12.420229,
+      "screen_mean_final_wealth": 1004.112215,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_momentum.py",
+      "name": "hunt_arch_no_momentum.py",
+      "screen_mean_edge": 4.741816,
+      "screen_mean_retail_edge": 15.690555,
+      "screen_mean_arb_edge": -10.948739,
+      "screen_mean_final_wealth": 1004.029898,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_v_size10_inv10.py",
+      "name": "exp_v_size10_inv10.py",
+      "screen_mean_edge": 4.598761,
+      "screen_mean_retail_edge": 16.105714,
+      "screen_mean_arb_edge": -11.506953,
+      "screen_mean_final_wealth": 1003.91795,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/strategy_final.py",
+      "name": "strategy_final.py",
+      "screen_mean_edge": 4.598761,
+      "screen_mean_retail_edge": 16.105714,
+      "screen_mean_arb_edge": -11.506953,
+      "screen_mean_final_wealth": 1003.91795,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_multilevel_v5.py",
+      "name": "hunt_spread_multilevel_v5.py",
+      "screen_mean_edge": 4.554105,
+      "screen_mean_retail_edge": 18.542295,
+      "screen_mean_arb_edge": -13.98819,
+      "screen_mean_final_wealth": 1003.351058,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_11.py",
+      "name": "hunt_extreme_11.py",
+      "screen_mean_edge": 4.471511,
+      "screen_mean_retail_edge": 15.116236,
+      "screen_mean_arb_edge": -10.644725,
+      "screen_mean_final_wealth": 1003.712778,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_best_v1.py",
+      "name": "hunt_arch_best_v1.py",
+      "screen_mean_edge": 4.414991,
+      "screen_mean_retail_edge": 25.85673,
+      "screen_mean_arb_edge": -21.441738,
+      "screen_mean_final_wealth": 1003.10139,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v9.py",
+      "name": "hunt_onesided_v9.py",
+      "screen_mean_edge": 4.361362,
+      "screen_mean_retail_edge": 16.350974,
+      "screen_mean_arb_edge": -11.989612,
+      "screen_mean_final_wealth": 1003.527155,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_y_size10_inv8.py",
+      "name": "exp_y_size10_inv8.py",
+      "screen_mean_edge": 4.333021,
+      "screen_mean_retail_edge": 17.395742,
+      "screen_mean_arb_edge": -13.062721,
+      "screen_mean_final_wealth": 1003.749885,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_fillbias.py",
+      "name": "hunt_arch_no_fillbias.py",
+      "screen_mean_edge": 4.296815,
+      "screen_mean_retail_edge": 14.072709,
+      "screen_mean_arb_edge": -9.775895,
+      "screen_mean_final_wealth": 1003.189955,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_s_size10_inv15.py",
+      "name": "exp_s_size10_inv15.py",
+      "screen_mean_edge": 4.186951,
+      "screen_mean_retail_edge": 14.55714,
+      "screen_mean_arb_edge": -10.370189,
+      "screen_mean_final_wealth": 1003.349818,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_multilevel_v2.py",
+      "name": "hunt_spread_multilevel_v2.py",
+      "screen_mean_edge": 4.133014,
+      "screen_mean_retail_edge": 17.691529,
+      "screen_mean_arb_edge": -13.558515,
+      "screen_mean_final_wealth": 1003.43286,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_multilevel_v3.py",
+      "name": "hunt_spread_multilevel_v3.py",
+      "screen_mean_edge": 3.943232,
+      "screen_mean_retail_edge": 15.023941,
+      "screen_mean_arb_edge": -11.080709,
+      "screen_mean_final_wealth": 1003.046417,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_t_size7_inv15.py",
+      "name": "exp_t_size7_inv15.py",
+      "screen_mean_edge": 3.810793,
+      "screen_mean_retail_edge": 11.025493,
+      "screen_mean_arb_edge": -7.214701,
+      "screen_mean_final_wealth": 1003.303605,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_best_v3.py",
+      "name": "hunt_arch_best_v3.py",
+      "screen_mean_edge": 3.737784,
+      "screen_mean_retail_edge": 22.914558,
+      "screen_mean_arb_edge": -19.176774,
+      "screen_mean_final_wealth": 1002.509463,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_r_size8_inv20.py",
+      "name": "exp_r_size8_inv20.py",
+      "screen_mean_edge": 3.700876,
+      "screen_mean_retail_edge": 11.871431,
+      "screen_mean_arb_edge": -8.170555,
+      "screen_mean_final_wealth": 1003.136633,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_q_size7_inv20.py",
+      "name": "exp_q_size7_inv20.py",
+      "screen_mean_edge": 3.607993,
+      "screen_mean_retail_edge": 10.753508,
+      "screen_mean_arb_edge": -7.145515,
+      "screen_mean_final_wealth": 1002.926648,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_x_size12_inv10.py",
+      "name": "exp_x_size12_inv10.py",
+      "screen_mean_edge": 3.522427,
+      "screen_mean_retail_edge": 18.938427,
+      "screen_mean_arb_edge": -15.415999,
+      "screen_mean_final_wealth": 1002.666402,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_inner_reduce.py",
+      "name": "hunt_spread_inner_reduce.py",
+      "screen_mean_edge": 3.462702,
+      "screen_mean_retail_edge": 16.620839,
+      "screen_mean_arb_edge": -13.158137,
+      "screen_mean_final_wealth": 1002.731722,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v7.py",
+      "name": "hunt_onesided_v7.py",
+      "screen_mean_edge": 3.458723,
+      "screen_mean_retail_edge": 14.166798,
+      "screen_mean_arb_edge": -10.708075,
+      "screen_mean_final_wealth": 1002.883663,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_multilevel_v4.py",
+      "name": "hunt_spread_multilevel_v4.py",
+      "screen_mean_edge": 3.451776,
+      "screen_mean_retail_edge": 14.279938,
+      "screen_mean_arb_edge": -10.828162,
+      "screen_mean_final_wealth": 1002.735985,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v10.py",
+      "name": "hunt_onesided_v10.py",
+      "screen_mean_edge": 3.445367,
+      "screen_mean_retail_edge": 13.910595,
+      "screen_mean_arb_edge": -10.465228,
+      "screen_mean_final_wealth": 1002.882912,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_p_size6_inv20.py",
+      "name": "exp_p_size6_inv20.py",
+      "screen_mean_edge": 3.385993,
+      "screen_mean_retail_edge": 9.565875,
+      "screen_mean_arb_edge": -6.179882,
+      "screen_mean_final_wealth": 1002.953777,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_o_size5_inv15.py",
+      "name": "exp_o_size5_inv15.py",
+      "screen_mean_edge": 3.249254,
+      "screen_mean_retail_edge": 8.490543,
+      "screen_mean_arb_edge": -5.241288,
+      "screen_mean_final_wealth": 1003.039513,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_n_size5_inv20.py",
+      "name": "exp_n_size5_inv20.py",
+      "screen_mean_edge": 3.114945,
+      "screen_mean_retail_edge": 8.373296,
+      "screen_mean_arb_edge": -5.258351,
+      "screen_mean_final_wealth": 1002.85278,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_l_size6_inv30.py",
+      "name": "exp_l_size6_inv30.py",
+      "screen_mean_edge": 3.09758,
+      "screen_mean_retail_edge": 9.337983,
+      "screen_mean_arb_edge": -6.240402,
+      "screen_mean_final_wealth": 1002.742255,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v8.py",
+      "name": "hunt_onesided_v8.py",
+      "screen_mean_edge": 3.095484,
+      "screen_mean_retail_edge": 14.470887,
+      "screen_mean_arb_edge": -11.375403,
+      "screen_mean_final_wealth": 1002.435097,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v11.py",
+      "name": "hunt_onesided_v11.py",
+      "screen_mean_edge": 3.032544,
+      "screen_mean_retail_edge": 13.337135,
+      "screen_mean_arb_edge": -10.304591,
+      "screen_mean_final_wealth": 1002.353408,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_m_size5_inv25.py",
+      "name": "exp_m_size5_inv25.py",
+      "screen_mean_edge": 3.000983,
+      "screen_mean_retail_edge": 8.272862,
+      "screen_mean_arb_edge": -5.271878,
+      "screen_mean_final_wealth": 1002.725368,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/minimax/strategy.py",
+      "name": "strategy.py",
+      "screen_mean_edge": 2.990419,
+      "screen_mean_retail_edge": 12.487237,
+      "screen_mean_arb_edge": -9.496818,
+      "screen_mean_final_wealth": 1002.330298,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_g_size5.py",
+      "name": "exp_g_size5.py",
+      "screen_mean_edge": 2.90075,
+      "screen_mean_retail_edge": 8.202617,
+      "screen_mean_arb_edge": -5.301867,
+      "screen_mean_final_wealth": 1002.600353,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_i_size7.py",
+      "name": "exp_i_size7.py",
+      "screen_mean_edge": 2.516024,
+      "screen_mean_retail_edge": 9.383992,
+      "screen_mean_arb_edge": -6.867968,
+      "screen_mean_final_wealth": 1002.115187,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_f_size4.py",
+      "name": "exp_f_size4.py",
+      "screen_mean_edge": 2.506371,
+      "screen_mean_retail_edge": 6.842854,
+      "screen_mean_arb_edge": -4.336483,
+      "screen_mean_final_wealth": 1002.339533,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_k_size5_maxinv50.py",
+      "name": "exp_k_size5_maxinv50.py",
+      "screen_mean_edge": 2.23479,
+      "screen_mean_retail_edge": 7.258141,
+      "screen_mean_arb_edge": -5.02335,
+      "screen_mean_final_wealth": 1001.914195,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_h_size3_1cool.py",
+      "name": "exp_h_size3_1cool.py",
+      "screen_mean_edge": 2.104311,
+      "screen_mean_retail_edge": 5.848986,
+      "screen_mean_arb_edge": -3.744675,
+      "screen_mean_final_wealth": 1001.904268,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_a_bigger_size.py",
+      "name": "exp_a_bigger_size.py",
+      "screen_mean_edge": 2.016592,
+      "screen_mean_retail_edge": 5.375203,
+      "screen_mean_arb_edge": -3.358611,
+      "screen_mean_final_wealth": 1001.899867,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_u_size15_inv15.py",
+      "name": "exp_u_size15_inv15.py",
+      "screen_mean_edge": 1.885667,
+      "screen_mean_retail_edge": 20.010489,
+      "screen_mean_arb_edge": -18.124822,
+      "screen_mean_final_wealth": 1000.88897,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_b_multi_level.py",
+      "name": "exp_b_multi_level.py",
+      "screen_mean_edge": 1.773933,
+      "screen_mean_retail_edge": 5.421986,
+      "screen_mean_arb_edge": -3.648053,
+      "screen_mean_final_wealth": 1001.7619,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_j_size10.py",
+      "name": "exp_j_size10.py",
+      "screen_mean_edge": 1.772935,
+      "screen_mean_retail_edge": 11.2497,
+      "screen_mean_arb_edge": -9.476766,
+      "screen_mean_final_wealth": 1001.035922,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_13.py",
+      "name": "hunt_extreme_13.py",
+      "screen_mean_edge": 1.727158,
+      "screen_mean_retail_edge": 11.402528,
+      "screen_mean_arb_edge": -9.67537,
+      "screen_mean_final_wealth": 1001.156208,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_d_1step_cooldown.py",
+      "name": "exp_d_1step_cooldown.py",
+      "screen_mean_edge": 1.627281,
+      "screen_mean_retail_edge": 4.441169,
+      "screen_mean_arb_edge": -2.813887,
+      "screen_mean_final_wealth": 1001.440675,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_c_order_persistence.py",
+      "name": "exp_c_order_persistence.py",
+      "screen_mean_edge": 1.597908,
+      "screen_mean_retail_edge": 4.049833,
+      "screen_mean_arb_edge": -2.451925,
+      "screen_mean_final_wealth": 1001.544907,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_e_directional.py",
+      "name": "exp_e_directional.py",
+      "screen_mean_edge": 1.545395,
+      "screen_mean_retail_edge": 4.09786,
+      "screen_mean_arb_edge": -2.552464,
+      "screen_mean_final_wealth": 1001.444897,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/strategy_v31/strategy.py",
+      "name": "strategy.py",
+      "screen_mean_edge": 1.151532,
+      "screen_mean_retail_edge": 3.533409,
+      "screen_mean_arb_edge": -2.381877,
+      "screen_mean_final_wealth": 1001.043115,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_10.py",
+      "name": "hunt_extreme_10.py",
+      "screen_mean_edge": 0.892803,
+      "screen_mean_retail_edge": 20.824049,
+      "screen_mean_arb_edge": -19.931246,
+      "screen_mean_final_wealth": 1000.27032,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/mean_edge_lab/directions/strategy_fill_reactive.py",
+      "name": "strategy_fill_reactive.py",
+      "screen_mean_edge": 0.677092,
+      "screen_mean_retail_edge": 2.062313,
+      "screen_mean_arb_edge": -1.385221,
+      "screen_mean_final_wealth": 1000.543517,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/mean_edge_lab/strategy_template.py",
+      "name": "strategy_template.py",
+      "screen_mean_edge": 0.665158,
+      "screen_mean_retail_edge": 2.004231,
+      "screen_mean_arb_edge": -1.339073,
+      "screen_mean_final_wealth": 1000.550607,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/iterations/strategy_v28.py",
+      "name": "strategy_v28.py",
+      "screen_mean_edge": 0.662454,
+      "screen_mean_retail_edge": 2.000494,
+      "screen_mean_arb_edge": -1.33804,
+      "screen_mean_final_wealth": 1000.547903,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/mean_edge_lab/directions/strategy_baseline_cancelall.py",
+      "name": "strategy_baseline_cancelall.py",
+      "screen_mean_edge": 0.662454,
+      "screen_mean_retail_edge": 2.000494,
+      "screen_mean_arb_edge": -1.33804,
+      "screen_mean_final_wealth": 1000.547903,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/mean_edge_lab/directions/strategy_ladder_two_level.py",
+      "name": "strategy_ladder_two_level.py",
+      "screen_mean_edge": 0.555847,
+      "screen_mean_retail_edge": 2.125962,
+      "screen_mean_arb_edge": -1.570114,
+      "screen_mean_final_wealth": 1000.484803,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/mean_edge_lab/directions/strategy_queue_reprice.py",
+      "name": "strategy_queue_reprice.py",
+      "screen_mean_edge": 0.533071,
+      "screen_mean_retail_edge": 1.828615,
+      "screen_mean_arb_edge": -1.295544,
+      "screen_mean_final_wealth": 1000.511218,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/mean_edge_lab/directions/strategy_momentum_shield.py",
+      "name": "strategy_momentum_shield.py",
+      "screen_mean_edge": 0.515255,
+      "screen_mean_retail_edge": 1.578672,
+      "screen_mean_arb_edge": -1.063416,
+      "screen_mean_final_wealth": 1000.433135,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/mean_edge_lab/directions/strategy_mean_reversion.py",
+      "name": "strategy_mean_reversion.py",
+      "screen_mean_edge": 0.50865,
+      "screen_mean_retail_edge": 2.174421,
+      "screen_mean_arb_edge": -1.665772,
+      "screen_mean_final_wealth": 1000.38218,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/mean_edge_lab/directions/strategy_pulse_quote.py",
+      "name": "strategy_pulse_quote.py",
+      "screen_mean_edge": 0.360373,
+      "screen_mean_retail_edge": 1.385607,
+      "screen_mean_arb_edge": -1.025233,
+      "screen_mean_final_wealth": 1000.301398,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/mean_edge_lab/directions/strategy_inside_join.py",
+      "name": "strategy_inside_join.py",
+      "screen_mean_edge": 0.348217,
+      "screen_mean_retail_edge": 5.824309,
+      "screen_mean_arb_edge": -5.476093,
+      "screen_mean_final_wealth": 1000.317867,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/mean_edge_lab/directions/strategy_regime_onesided.py",
+      "name": "strategy_regime_onesided.py",
+      "screen_mean_edge": 0.240838,
+      "screen_mean_retail_edge": 1.12787,
+      "screen_mean_arb_edge": -0.887032,
+      "screen_mean_final_wealth": 1000.215653,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_minimal_s10_i10.py",
+      "name": "hunt_arch_minimal_s10_i10.py",
+      "screen_mean_edge": 0.219578,
+      "screen_mean_retail_edge": 20.935998,
+      "screen_mean_arb_edge": -20.71642,
+      "screen_mean_final_wealth": 998.961128,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/mean_edge_lab/directions/strategy_retail_capture.py",
+      "name": "strategy_retail_capture.py",
+      "screen_mean_edge": -0.062996,
+      "screen_mean_retail_edge": 4.920179,
+      "screen_mean_arb_edge": -4.983176,
+      "screen_mean_final_wealth": 999.796337,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v13.py",
+      "name": "hunt_onesided_v13.py",
+      "screen_mean_edge": -0.501083,
+      "screen_mean_retail_edge": 18.400401,
+      "screen_mean_arb_edge": -18.901484,
+      "screen_mean_final_wealth": 998.912993,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/.worktrees/mean-edge-opt/strategies/mean_edge_lab/directions/strategy_outside_defensive.py",
+      "name": "strategy_outside_defensive.py",
+      "screen_mean_edge": -0.667118,
+      "screen_mean_retail_edge": 0.109326,
+      "screen_mean_arb_edge": -0.776445,
+      "screen_mean_final_wealth": 999.24144,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_1.py",
+      "name": "hunt_extreme_1.py",
+      "screen_mean_edge": -1.530934,
+      "screen_mean_retail_edge": 17.396536,
+      "screen_mean_arb_edge": -18.92747,
+      "screen_mean_final_wealth": 997.702988,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_9.py",
+      "name": "hunt_extreme_9.py",
+      "screen_mean_edge": -1.659284,
+      "screen_mean_retail_edge": 5.993622,
+      "screen_mean_arb_edge": -7.652907,
+      "screen_mean_final_wealth": 997.868927,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_vol.py",
+      "name": "hunt_arch_no_vol.py",
+      "screen_mean_edge": -3.87226,
+      "screen_mean_retail_edge": 18.152867,
+      "screen_mean_arb_edge": -22.025127,
+      "screen_mean_final_wealth": 995.085278,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_4.py",
+      "name": "hunt_extreme_4.py",
+      "screen_mean_edge": -3.978154,
+      "screen_mean_retail_edge": 12.000602,
+      "screen_mean_arb_edge": -15.978756,
+      "screen_mean_final_wealth": 995.194242,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v14.py",
+      "name": "hunt_onesided_v14.py",
+      "screen_mean_edge": -4.829004,
+      "screen_mean_retail_edge": 4.040491,
+      "screen_mean_arb_edge": -8.869496,
+      "screen_mean_final_wealth": 994.82802,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v6.py",
+      "name": "hunt_onesided_v6.py",
+      "screen_mean_edge": -6.123205,
+      "screen_mean_retail_edge": 17.12364,
+      "screen_mean_arb_edge": -23.246845,
+      "screen_mean_final_wealth": 993.064795,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_multilevel.py",
+      "name": "hunt_spread_multilevel.py",
+      "screen_mean_edge": -8.247006,
+      "screen_mean_retail_edge": 14.144757,
+      "screen_mean_arb_edge": -22.391763,
+      "screen_mean_final_wealth": 991.274212,
+      "screen_failures": 27
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_8.py",
+      "name": "hunt_extreme_8.py",
+      "screen_mean_edge": -17.320428,
+      "screen_mean_retail_edge": 19.44382,
+      "screen_mean_arb_edge": -36.764248,
+      "screen_mean_final_wealth": 982.0816,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_5.py",
+      "name": "hunt_extreme_5.py",
+      "screen_mean_edge": -29.256428,
+      "screen_mean_retail_edge": 9.222488,
+      "screen_mean_arb_edge": -38.478916,
+      "screen_mean_final_wealth": 970.10409,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_2.py",
+      "name": "hunt_extreme_2.py",
+      "screen_mean_edge": -53.501421,
+      "screen_mean_retail_edge": 9.192602,
+      "screen_mean_arb_edge": -62.694023,
+      "screen_mean_final_wealth": 945.808425,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v4.py",
+      "name": "hunt_onesided_v4.py",
+      "screen_mean_edge": -76.510149,
+      "screen_mean_retail_edge": 19.721068,
+      "screen_mean_arb_edge": -96.231217,
+      "screen_mean_final_wealth": 923.472615,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_tight1_v2.py",
+      "name": "hunt_spread_tight1_v2.py",
+      "screen_mean_edge": -90.868794,
+      "screen_mean_retail_edge": 10.749452,
+      "screen_mean_arb_edge": -101.618246,
+      "screen_mean_final_wealth": 908.956632,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_minimal_s25_i5.py",
+      "name": "hunt_arch_minimal_s25_i5.py",
+      "screen_mean_edge": -104.578247,
+      "screen_mean_retail_edge": 0.361394,
+      "screen_mean_arb_edge": -104.939641,
+      "screen_mean_final_wealth": 857.52518,
+      "screen_failures": 25
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v1.py",
+      "name": "hunt_onesided_v1.py",
+      "screen_mean_edge": -146.014027,
+      "screen_mean_retail_edge": 19.005044,
+      "screen_mean_arb_edge": -165.019071,
+      "screen_mean_final_wealth": 853.245774,
+      "screen_failures": 2
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_3.py",
+      "name": "hunt_extreme_3.py",
+      "screen_mean_edge": -171.153529,
+      "screen_mean_retail_edge": 6.803228,
+      "screen_mean_arb_edge": -177.956756,
+      "screen_mean_final_wealth": 828.560928,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_minimal_s20_i5.py",
+      "name": "hunt_arch_minimal_s20_i5.py",
+      "screen_mean_edge": -173.856033,
+      "screen_mean_retail_edge": 0.383169,
+      "screen_mean_arb_edge": -174.239202,
+      "screen_mean_final_wealth": 717.300209,
+      "screen_failures": 28
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_cd_s20.py",
+      "name": "hunt_arch_no_cd_s20.py",
+      "screen_mean_edge": -341.035932,
+      "screen_mean_retail_edge": 0.659602,
+      "screen_mean_arb_edge": -341.695534,
+      "screen_mean_final_wealth": 661.101872,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_vol_adaptive.py",
+      "name": "hunt_spread_vol_adaptive.py",
+      "screen_mean_edge": -396.70136,
+      "screen_mean_retail_edge": 0.058072,
+      "screen_mean_arb_edge": -396.759431,
+      "screen_mean_final_wealth": 569.496043,
+      "screen_failures": 25
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_tight1.py",
+      "name": "hunt_spread_tight1.py",
+      "screen_mean_edge": -461.833146,
+      "screen_mean_retail_edge": 0.157959,
+      "screen_mean_arb_edge": -461.991105,
+      "screen_mean_final_wealth": 600.168389,
+      "screen_failures": 25
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_baseline_bigger.py",
+      "name": "hunt_spread_baseline_bigger.py",
+      "screen_mean_edge": -520.240053,
+      "screen_mean_retail_edge": 15.086641,
+      "screen_mean_arb_edge": -535.326694,
+      "screen_mean_final_wealth": 478.480653,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_7.py",
+      "name": "hunt_extreme_7.py",
+      "screen_mean_edge": -568.574137,
+      "screen_mean_retail_edge": 3.946592,
+      "screen_mean_arb_edge": -572.520729,
+      "screen_mean_final_wealth": 433.070857,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_cd_s15.py",
+      "name": "hunt_arch_no_cd_s15.py",
+      "screen_mean_edge": -596.616706,
+      "screen_mean_retail_edge": 14.120898,
+      "screen_mean_arb_edge": -610.737604,
+      "screen_mean_final_wealth": 403.279885,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_multilevel_asym.py",
+      "name": "hunt_spread_multilevel_asym.py",
+      "screen_mean_edge": -672.167758,
+      "screen_mean_retail_edge": 9.36001,
+      "screen_mean_arb_edge": -681.527768,
+      "screen_mean_final_wealth": 324.707884,
+      "screen_failures": 3
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_cautious_tight.py",
+      "name": "hunt_spread_cautious_tight.py",
+      "screen_mean_edge": -728.733933,
+      "screen_mean_retail_edge": 1.517853,
+      "screen_mean_arb_edge": -730.251786,
+      "screen_mean_final_wealth": 271.00771,
+      "screen_failures": 20
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_w_size20_inv10.py",
+      "name": "exp_w_size20_inv10.py",
+      "screen_mean_edge": -746.856363,
+      "screen_mean_retail_edge": 4.77656,
+      "screen_mean_arb_edge": -751.632923,
+      "screen_mean_final_wealth": 256.86046,
+      "screen_failures": 7
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v5.py",
+      "name": "hunt_onesided_v5.py",
+      "screen_mean_edge": -755.42426,
+      "screen_mean_retail_edge": 8.155111,
+      "screen_mean_arb_edge": -763.579371,
+      "screen_mean_final_wealth": 245.939343,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v2.py",
+      "name": "hunt_onesided_v2.py",
+      "screen_mean_edge": -761.29764,
+      "screen_mean_retail_edge": 9.672056,
+      "screen_mean_arb_edge": -770.969697,
+      "screen_mean_final_wealth": 238.091417,
+      "screen_failures": 20
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v12.py",
+      "name": "hunt_onesided_v12.py",
+      "screen_mean_edge": -785.271255,
+      "screen_mean_retail_edge": 1.245273,
+      "screen_mean_arb_edge": -786.516528,
+      "screen_mean_final_wealth": 213.381525,
+      "screen_failures": 4
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_6.py",
+      "name": "hunt_extreme_6.py",
+      "screen_mean_edge": -813.793765,
+      "screen_mean_retail_edge": 7.552372,
+      "screen_mean_arb_edge": -821.346137,
+      "screen_mean_final_wealth": 187.322644,
+      "screen_failures": 21
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_asymmetric.py",
+      "name": "hunt_spread_asymmetric.py",
+      "screen_mean_edge": -881.893404,
+      "screen_mean_retail_edge": 1.718896,
+      "screen_mean_arb_edge": -883.612301,
+      "screen_mean_final_wealth": 117.282042,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_minimal_s15_i8.py",
+      "name": "hunt_arch_minimal_s15_i8.py",
+      "screen_mean_edge": -890.236033,
+      "screen_mean_retail_edge": 1.008668,
+      "screen_mean_arb_edge": -891.244701,
+      "screen_mean_final_wealth": 106.491835,
+      "screen_failures": 0
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_onesided_v3.py",
+      "name": "hunt_onesided_v3.py",
+      "screen_mean_edge": -926.046735,
+      "screen_mean_retail_edge": 0.616268,
+      "screen_mean_arb_edge": -926.663003,
+      "screen_mean_final_wealth": 68.946368,
+      "screen_failures": 1
+    }
+  ],
+  "robust_results": [
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_cd_no_mom.py",
+      "name": "hunt_arch_no_cd_no_mom.py",
+      "screen_mean_edge": 7.671586,
+      "screen_mean_retail_edge": 20.992162,
+      "screen_mean_arb_edge": -13.320576,
+      "screen_mean_final_wealth": 1006.671123,
+      "screen_failures": 0,
+      "screen_rank": 1,
+      "robust_mean_edge": 7.118157,
+      "robust_edge_stddev": 1.7093558771402753,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 4.810278,
+          "mean_retail_edge": 16.805897,
+          "mean_arb_edge": -11.995619,
+          "mean_final_wealth": 1004.435633
+        },
+        {
+          "seed_start": 300,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 8.895087,
+          "mean_retail_edge": 21.804581,
+          "mean_arb_edge": -12.909494,
+          "mean_final_wealth": 1008.714197
+        },
+        {
+          "seed_start": 600,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 7.649106,
+          "mean_retail_edge": 20.039949,
+          "mean_arb_edge": -12.390844,
+          "mean_final_wealth": 1008.049139
+        }
+      ]
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_cooldown.py",
+      "name": "hunt_arch_no_cooldown.py",
+      "screen_mean_edge": 7.303076,
+      "screen_mean_retail_edge": 21.258934,
+      "screen_mean_arb_edge": -13.955858,
+      "screen_mean_final_wealth": 1006.483688,
+      "screen_failures": 0,
+      "screen_rank": 2,
+      "robust_mean_edge": 6.756032666666667,
+      "robust_edge_stddev": 1.715271015348174,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 4.451023,
+          "mean_retail_edge": 16.978091,
+          "mean_arb_edge": -12.527068,
+          "mean_final_wealth": 1004.158249
+        },
+        {
+          "seed_start": 300,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 8.563083,
+          "mean_retail_edge": 21.887856,
+          "mean_arb_edge": -13.324773,
+          "mean_final_wealth": 1008.420055
+        },
+        {
+          "seed_start": 600,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 7.253992,
+          "mean_retail_edge": 20.09041,
+          "mean_arb_edge": -12.836418,
+          "mean_final_wealth": 1007.578866
+        }
+      ]
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_cd_no_fb_no_mom.py",
+      "name": "hunt_arch_no_cd_no_fb_no_mom.py",
+      "screen_mean_edge": 6.397165,
+      "screen_mean_retail_edge": 18.498125,
+      "screen_mean_arb_edge": -12.10096,
+      "screen_mean_final_wealth": 1005.305967,
+      "screen_failures": 0,
+      "screen_rank": 4,
+      "robust_mean_edge": 6.294076666666667,
+      "robust_edge_stddev": 1.7352667156826995,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 4.051325,
+          "mean_retail_edge": 14.941079,
+          "mean_arb_edge": -10.889754,
+          "mean_final_wealth": 1003.739278
+        },
+        {
+          "seed_start": 300,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 8.278166,
+          "mean_retail_edge": 19.896316,
+          "mean_arb_edge": -11.61815,
+          "mean_final_wealth": 1007.830218
+        },
+        {
+          "seed_start": 600,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 6.552739,
+          "mean_retail_edge": 17.308127,
+          "mean_arb_edge": -10.755388,
+          "mean_final_wealth": 1006.977275
+        }
+      ]
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_best_v4.py",
+      "name": "hunt_arch_best_v4.py",
+      "screen_mean_edge": 6.571419,
+      "screen_mean_retail_edge": 20.629749,
+      "screen_mean_arb_edge": -14.058331,
+      "screen_mean_final_wealth": 1005.717673,
+      "screen_failures": 0,
+      "screen_rank": 3,
+      "robust_mean_edge": 6.096767666666667,
+      "robust_edge_stddev": 1.5976752733769843,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 3.981327,
+          "mean_retail_edge": 16.488609,
+          "mean_arb_edge": -12.507282,
+          "mean_final_wealth": 1003.610621
+        },
+        {
+          "seed_start": 300,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 7.841898,
+          "mean_retail_edge": 21.457009,
+          "mean_arb_edge": -13.61511,
+          "mean_final_wealth": 1007.68818
+        },
+        {
+          "seed_start": 600,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 6.467078,
+          "mean_retail_edge": 19.504434,
+          "mean_arb_edge": -13.037356,
+          "mean_final_wealth": 1006.870477
+        }
+      ]
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_best_v2.py",
+      "name": "hunt_arch_best_v2.py",
+      "screen_mean_edge": 6.2393,
+      "screen_mean_retail_edge": 21.197541,
+      "screen_mean_arb_edge": -14.958241,
+      "screen_mean_final_wealth": 1005.47305,
+      "screen_failures": 0,
+      "screen_rank": 5,
+      "robust_mean_edge": 5.850956999999999,
+      "robust_edge_stddev": 1.7370645527673019,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 3.587316,
+          "mean_retail_edge": 16.992775,
+          "mean_arb_edge": -13.405459,
+          "mean_final_wealth": 1003.259209
+        },
+        {
+          "seed_start": 300,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 7.809238,
+          "mean_retail_edge": 22.109728,
+          "mean_arb_edge": -14.300491,
+          "mean_final_wealth": 1007.527393
+        },
+        {
+          "seed_start": 600,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 6.156317,
+          "mean_retail_edge": 20.096728,
+          "mean_arb_edge": -13.940411,
+          "mean_final_wealth": 1006.524818
+        }
+      ]
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_momentum.py",
+      "name": "hunt_arch_no_momentum.py",
+      "screen_mean_edge": 4.741816,
+      "screen_mean_retail_edge": 15.690555,
+      "screen_mean_arb_edge": -10.948739,
+      "screen_mean_final_wealth": 1004.029898,
+      "screen_failures": 0,
+      "screen_rank": 7,
+      "robust_mean_edge": 4.776580333333333,
+      "robust_edge_stddev": 1.3566697940015553,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 2.954188,
+          "mean_retail_edge": 13.212017,
+          "mean_arb_edge": -10.257829,
+          "mean_final_wealth": 1002.616209
+        },
+        {
+          "seed_start": 300,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 6.207386,
+          "mean_retail_edge": 17.104997,
+          "mean_arb_edge": -10.897611,
+          "mean_final_wealth": 1006.115382
+        },
+        {
+          "seed_start": 600,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 5.168167,
+          "mean_retail_edge": 15.737612,
+          "mean_arb_edge": -10.569445,
+          "mean_final_wealth": 1005.580452
+        }
+      ]
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_extreme_12.py",
+      "name": "hunt_extreme_12.py",
+      "screen_mean_edge": 4.787616,
+      "screen_mean_retail_edge": 17.207844,
+      "screen_mean_arb_edge": -12.420229,
+      "screen_mean_final_wealth": 1004.112215,
+      "screen_failures": 0,
+      "screen_rank": 6,
+      "robust_mean_edge": 4.776061333333333,
+      "robust_edge_stddev": 1.4700595105120366,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 2.831655,
+          "mean_retail_edge": 13.926819,
+          "mean_arb_edge": -11.095164,
+          "mean_final_wealth": 1002.568248
+        },
+        {
+          "seed_start": 300,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 6.385505,
+          "mean_retail_edge": 18.347391,
+          "mean_arb_edge": -11.961886,
+          "mean_final_wealth": 1006.282486
+        },
+        {
+          "seed_start": 600,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 5.111024,
+          "mean_retail_edge": 16.341542,
+          "mean_arb_edge": -11.230518,
+          "mean_final_wealth": 1005.437109
+        }
+      ]
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/iterations/exp_v_size10_inv10.py",
+      "name": "exp_v_size10_inv10.py",
+      "screen_mean_edge": 4.598761,
+      "screen_mean_retail_edge": 16.105714,
+      "screen_mean_arb_edge": -11.506953,
+      "screen_mean_final_wealth": 1003.91795,
+      "screen_failures": 0,
+      "screen_rank": 8,
+      "robust_mean_edge": 4.5967313333333335,
+      "robust_edge_stddev": 1.382699053405894,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 2.758514,
+          "mean_retail_edge": 13.503237,
+          "mean_arb_edge": -10.744722,
+          "mean_final_wealth": 1002.502498
+        },
+        {
+          "seed_start": 300,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 6.093337,
+          "mean_retail_edge": 17.296943,
+          "mean_arb_edge": -11.203606,
+          "mean_final_wealth": 1005.992702
+        },
+        {
+          "seed_start": 600,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 4.938343,
+          "mean_retail_edge": 15.898983,
+          "mean_arb_edge": -10.96064,
+          "mean_final_wealth": 1005.26228
+        }
+      ]
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/strategy_final.py",
+      "name": "strategy_final.py",
+      "screen_mean_edge": 4.598761,
+      "screen_mean_retail_edge": 16.105714,
+      "screen_mean_arb_edge": -11.506953,
+      "screen_mean_final_wealth": 1003.91795,
+      "screen_failures": 0,
+      "screen_rank": 9,
+      "robust_mean_edge": 4.5967313333333335,
+      "robust_edge_stddev": 1.382699053405894,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 2.758514,
+          "mean_retail_edge": 13.503237,
+          "mean_arb_edge": -10.744722,
+          "mean_final_wealth": 1002.502498
+        },
+        {
+          "seed_start": 300,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 6.093337,
+          "mean_retail_edge": 17.296943,
+          "mean_arb_edge": -11.203606,
+          "mean_final_wealth": 1005.992702
+        },
+        {
+          "seed_start": 600,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 4.938343,
+          "mean_retail_edge": 15.898983,
+          "mean_arb_edge": -10.96064,
+          "mean_final_wealth": 1005.26228
+        }
+      ]
+    },
+    {
+      "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_spread_multilevel_v5.py",
+      "name": "hunt_spread_multilevel_v5.py",
+      "screen_mean_edge": 4.554105,
+      "screen_mean_retail_edge": 18.542295,
+      "screen_mean_arb_edge": -13.98819,
+      "screen_mean_final_wealth": 1003.351058,
+      "screen_failures": 0,
+      "screen_rank": 10,
+      "robust_mean_edge": 4.282511666666666,
+      "robust_edge_stddev": 1.6142539239827034,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 2.311423,
+          "mean_retail_edge": 15.558624,
+          "mean_arb_edge": -13.247201,
+          "mean_final_wealth": 1001.783642
+        },
+        {
+          "seed_start": 300,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 6.265468,
+          "mean_retail_edge": 20.193898,
+          "mean_arb_edge": -13.92843,
+          "mean_final_wealth": 1005.833545
+        },
+        {
+          "seed_start": 600,
+          "ok": true,
+          "failures": 0,
+          "mean_edge": 4.270644,
+          "mean_retail_edge": 18.379174,
+          "mean_arb_edge": -14.10853,
+          "mean_final_wealth": 1004.817536
+        }
+      ]
+    }
+  ],
+  "best": {
+    "path": "/Users/weiming/Documents/GitHub/prediction-market-challenge/strategies/hunt_arch_no_cd_no_mom.py",
+    "name": "hunt_arch_no_cd_no_mom.py",
+    "screen_mean_edge": 7.671586,
+    "screen_mean_retail_edge": 20.992162,
+    "screen_mean_arb_edge": -13.320576,
+    "screen_mean_final_wealth": 1006.671123,
+    "screen_failures": 0,
+    "screen_rank": 1,
+    "robust_mean_edge": 7.118157,
+    "robust_edge_stddev": 1.7093558771402753,
+    "robust_runs": [
+      {
+        "seed_start": 0,
+        "ok": true,
+        "failures": 0,
+        "mean_edge": 4.810278,
+        "mean_retail_edge": 16.805897,
+        "mean_arb_edge": -11.995619,
+        "mean_final_wealth": 1004.435633
+      },
+      {
+        "seed_start": 300,
+        "ok": true,
+        "failures": 0,
+        "mean_edge": 8.895087,
+        "mean_retail_edge": 21.804581,
+        "mean_arb_edge": -12.909494,
+        "mean_final_wealth": 1008.714197
+      },
+      {
+        "seed_start": 600,
+        "ok": true,
+        "failures": 0,
+        "mean_edge": 7.649106,
+        "mean_retail_edge": 20.039949,
+        "mean_arb_edge": -12.390844,
+        "mean_final_wealth": 1008.049139
+      }
+    ]
+  }
+}

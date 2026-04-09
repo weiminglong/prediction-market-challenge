@@ -1,0 +1,142 @@
+[
+  {
+    "path": "strategies/mean_edge_lab/grind/no_cd_no_mom_candidates/strategy_rank02_p5.245663.py",
+    "robust_mean_edge": 8.097381333333333,
+    "robust_edge_stddev": 2.143216588626285,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 5.245663,
+        "mean_retail_edge": 18.217813,
+        "mean_arb_edge": -12.972151,
+        "mean_final_wealth": 1004.941376
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 10.412534,
+        "mean_retail_edge": 24.789986,
+        "mean_arb_edge": -14.377451,
+        "mean_final_wealth": 1010.304982
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 8.633947,
+        "mean_retail_edge": 21.730966,
+        "mean_arb_edge": -13.09702,
+        "mean_final_wealth": 1008.829404
+      }
+    ]
+  },
+  {
+    "path": "strategies/mean_edge_lab/grind/no_cd_no_mom_candidates/strategy_rank01_p5.357682.py",
+    "robust_mean_edge": 7.918725,
+    "robust_edge_stddev": 1.9132030625181082,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 5.357682,
+        "mean_retail_edge": 18.833758,
+        "mean_arb_edge": -13.476076,
+        "mean_final_wealth": 1004.785137
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 9.955099,
+        "mean_retail_edge": 24.803219,
+        "mean_arb_edge": -14.848121,
+        "mean_final_wealth": 1009.690733
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 8.443394,
+        "mean_retail_edge": 22.589796,
+        "mean_arb_edge": -14.146403,
+        "mean_final_wealth": 1008.803494
+      }
+    ]
+  },
+  {
+    "path": "strategies/mean_edge_lab/grind/no_cd_no_mom_candidates/strategy_rank04_p5.126455.py",
+    "robust_mean_edge": 7.666932333333333,
+    "robust_edge_stddev": 1.8932069207038325,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 5.126455,
+        "mean_retail_edge": 16.421624,
+        "mean_arb_edge": -11.295169,
+        "mean_final_wealth": 1004.820411
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 9.669175,
+        "mean_retail_edge": 21.623307,
+        "mean_arb_edge": -11.954132,
+        "mean_final_wealth": 1009.394022
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 8.205167,
+        "mean_retail_edge": 19.800626,
+        "mean_arb_edge": -11.595459,
+        "mean_final_wealth": 1008.555829
+      }
+    ]
+  },
+  {
+    "path": "strategies/mean_edge_lab/grind/no_cd_no_mom_candidates/strategy_rank03_p5.132837.py",
+    "robust_mean_edge": 7.379611666666667,
+    "robust_edge_stddev": 1.648323884497286,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 5.132837,
+        "mean_retail_edge": 16.126462,
+        "mean_arb_edge": -10.993625,
+        "mean_final_wealth": 1004.680554
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 9.041014,
+        "mean_retail_edge": 21.160525,
+        "mean_arb_edge": -12.119511,
+        "mean_final_wealth": 1008.919639
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 7.964984,
+        "mean_retail_edge": 19.428679,
+        "mean_arb_edge": -11.463694,
+        "mean_final_wealth": 1008.2568
+      }
+    ]
+  },
+  {
+    "path": "strategies/mean_edge_lab/grind/no_cd_no_mom_candidates/strategy_rank05_p5.093397.py",
+    "robust_mean_edge": 7.3569613333333335,
+    "robust_edge_stddev": 1.675631980934623,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 5.093397,
+        "mean_retail_edge": 16.409092,
+        "mean_arb_edge": -11.315695,
+        "mean_final_wealth": 1004.73418
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 9.09605,
+        "mean_retail_edge": 21.34107,
+        "mean_arb_edge": -12.24502,
+        "mean_final_wealth": 1008.929209
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 7.881437,
+        "mean_retail_edge": 19.56991,
+        "mean_arb_edge": -11.688473,
+        "mean_final_wealth": 1008.198167
+      }
+    ]
+  }
+]
