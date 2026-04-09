@@ -1,0 +1,239 @@
+{
+  "generated_at": "2026-04-09T17:26:08Z",
+  "screen_simulations": 120,
+  "robust_simulations": 200,
+  "robust_seed_starts": [
+    0,
+    300,
+    600
+  ],
+  "workers": 8,
+  "directions": [
+    {
+      "name": "v28_baseline",
+      "path": "strategies/iterations/strategy_v28.py",
+      "thesis": "Known strong cancel-all baseline from iterations"
+    },
+    {
+      "name": "cancelall_clone",
+      "path": "strategies/mean_edge_lab/directions/strategy_baseline_cancelall.py",
+      "thesis": "Control: local baseline clone to keep comparison stable"
+    },
+    {
+      "name": "queue_reprice",
+      "path": "strategies/mean_edge_lab/directions/strategy_queue_reprice.py",
+      "thesis": "Preserve queue priority and replace only when stale"
+    },
+    {
+      "name": "regime_onesided",
+      "path": "strategies/mean_edge_lab/directions/strategy_regime_onesided.py",
+      "thesis": "Regime-switch and disable toxic side in stressed states"
+    },
+    {
+      "name": "momentum_shield",
+      "path": "strategies/mean_edge_lab/directions/strategy_momentum_shield.py",
+      "thesis": "Use momentum to shield adverse side temporarily"
+    },
+    {
+      "name": "retail_capture",
+      "path": "strategies/mean_edge_lab/directions/strategy_retail_capture.py",
+      "thesis": "Tighter spread and larger size for retail flow capture"
+    },
+    {
+      "name": "parametric_template_default",
+      "path": "strategies/mean_edge_lab/strategy_template.py",
+      "thesis": "Current parametric template with default settings"
+    }
+  ],
+  "screen_results": [
+    {
+      "name": "parametric_template_default",
+      "path": "strategies/mean_edge_lab/strategy_template.py",
+      "thesis": "Current parametric template with default settings",
+      "mean_edge": 0.5655401054899997,
+      "mean_retail_edge": 1.8165245495799989,
+      "mean_arb_edge": -1.2509844440975002,
+      "mean_final_wealth": 1000.4543216666667
+    },
+    {
+      "name": "v28_baseline",
+      "path": "strategies/iterations/strategy_v28.py",
+      "thesis": "Known strong cancel-all baseline from iterations",
+      "mean_edge": 0.5627939991458331,
+      "mean_retail_edge": 1.813078745689999,
+      "mean_arb_edge": -1.2502847465491669,
+      "mean_final_wealth": 1000.4515741666669
+    },
+    {
+      "name": "cancelall_clone",
+      "path": "strategies/mean_edge_lab/directions/strategy_baseline_cancelall.py",
+      "thesis": "Control: local baseline clone to keep comparison stable",
+      "mean_edge": 0.5627939991458331,
+      "mean_retail_edge": 1.813078745689999,
+      "mean_arb_edge": -1.2502847465491669,
+      "mean_final_wealth": 1000.4515741666669
+    },
+    {
+      "name": "queue_reprice",
+      "path": "strategies/mean_edge_lab/directions/strategy_queue_reprice.py",
+      "thesis": "Preserve queue priority and replace only when stale",
+      "mean_edge": 0.4351350703158336,
+      "mean_retail_edge": 1.6287966624774997,
+      "mean_arb_edge": -1.1936615921433333,
+      "mean_final_wealth": 1000.4422041666664
+    },
+    {
+      "name": "momentum_shield",
+      "path": "strategies/mean_edge_lab/directions/strategy_momentum_shield.py",
+      "thesis": "Use momentum to shield adverse side temporarily",
+      "mean_edge": 0.4256127994075,
+      "mean_retail_edge": 1.4219287538366672,
+      "mean_arb_edge": -0.996315954431667,
+      "mean_final_wealth": 1000.3476275000002
+    },
+    {
+      "name": "regime_onesided",
+      "path": "strategies/mean_edge_lab/directions/strategy_regime_onesided.py",
+      "thesis": "Regime-switch and disable toxic side in stressed states",
+      "mean_edge": 0.16665166582749985,
+      "mean_retail_edge": 0.991476039966667,
+      "mean_arb_edge": -0.8248243741533332,
+      "mean_final_wealth": 1000.0967408333332
+    },
+    {
+      "name": "retail_capture",
+      "path": "strategies/mean_edge_lab/directions/strategy_retail_capture.py",
+      "thesis": "Tighter spread and larger size for retail flow capture",
+      "mean_edge": -0.1649539112433333,
+      "mean_retail_edge": 4.501619421839165,
+      "mean_arb_edge": -4.6665733330525,
+      "mean_final_wealth": 999.658285
+    }
+  ],
+  "robust_results": [
+    {
+      "name": "parametric_template_default",
+      "path": "strategies/mean_edge_lab/strategy_template.py",
+      "thesis": "Current parametric template with default settings",
+      "screen_mean_edge": 0.5655401054899997,
+      "robust_mean_edge": 0.6873551252555001,
+      "robust_edge_stddev": 0.17023580362272978,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 0.4525749564199999,
+          "mean_retail_edge": 1.7018339963734999,
+          "mean_arb_edge": -1.2492590399559997,
+          "mean_final_wealth": 1000.3196
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 0.8508868123090001,
+          "mean_retail_edge": 2.1465617838275,
+          "mean_arb_edge": -1.2956749715499996,
+          "mean_final_wealth": 1000.6878754999997
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 0.7586036070375003,
+          "mean_retail_edge": 2.0040675731745003,
+          "mean_arb_edge": -1.2454639661290001,
+          "mean_final_wealth": 1000.7205214999998
+        }
+      ]
+    },
+    {
+      "name": "v28_baseline",
+      "path": "strategies/iterations/strategy_v28.py",
+      "thesis": "Known strong cancel-all baseline from iterations",
+      "screen_mean_edge": 0.5627939991458331,
+      "robust_mean_edge": 0.6835325698420001,
+      "robust_edge_stddev": 0.17053141016337225,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 0.44831906559299983,
+          "mean_retail_edge": 1.696635028115,
+          "mean_arb_edge": -1.2483159625204998,
+          "mean_final_wealth": 1000.3152960000003
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 0.8472630505955001,
+          "mean_retail_edge": 2.1422970402235,
+          "mean_arb_edge": -1.2950339896599998,
+          "mean_final_wealth": 1000.6842499999998
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 0.7550155933375001,
+          "mean_retail_edge": 1.9998187322615002,
+          "mean_arb_edge": -1.2448031389145002,
+          "mean_final_wealth": 1000.7169309999996
+        }
+      ]
+    },
+    {
+      "name": "cancelall_clone",
+      "path": "strategies/mean_edge_lab/directions/strategy_baseline_cancelall.py",
+      "thesis": "Control: local baseline clone to keep comparison stable",
+      "screen_mean_edge": 0.5627939991458331,
+      "robust_mean_edge": 0.6835325698420001,
+      "robust_edge_stddev": 0.17053141016337225,
+      "robust_runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 0.44831906559299983,
+          "mean_retail_edge": 1.696635028115,
+          "mean_arb_edge": -1.2483159625204998,
+          "mean_final_wealth": 1000.3152960000003
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 0.8472630505955001,
+          "mean_retail_edge": 2.1422970402235,
+          "mean_arb_edge": -1.2950339896599998,
+          "mean_final_wealth": 1000.6842499999998
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 0.7550155933375001,
+          "mean_retail_edge": 1.9998187322615002,
+          "mean_arb_edge": -1.2448031389145002,
+          "mean_final_wealth": 1000.7169309999996
+        }
+      ]
+    }
+  ],
+  "recommended_direction": {
+    "name": "parametric_template_default",
+    "path": "strategies/mean_edge_lab/strategy_template.py",
+    "thesis": "Current parametric template with default settings",
+    "screen_mean_edge": 0.5655401054899997,
+    "robust_mean_edge": 0.6873551252555001,
+    "robust_edge_stddev": 0.17023580362272978,
+    "robust_runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 0.4525749564199999,
+        "mean_retail_edge": 1.7018339963734999,
+        "mean_arb_edge": -1.2492590399559997,
+        "mean_final_wealth": 1000.3196
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 0.8508868123090001,
+        "mean_retail_edge": 2.1465617838275,
+        "mean_arb_edge": -1.2956749715499996,
+        "mean_final_wealth": 1000.6878754999997
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 0.7586036070375003,
+        "mean_retail_edge": 2.0040675731745003,
+        "mean_arb_edge": -1.2454639661290001,
+        "mean_final_wealth": 1000.7205214999998
+      }
+    ]
+  }
+}

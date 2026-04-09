@@ -1,0 +1,102 @@
+[
+  {
+    "path": "strategies/mean_edge_lab/grind/trend_shock_candidates/strategy_rank01_p6.810936.py",
+    "mean": 9.713523,
+    "std": 2.100414479474151,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 6.810936,
+        "mean_retail_edge": 21.655225,
+        "mean_arb_edge": -14.844289
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 11.711491,
+        "mean_retail_edge": 29.203047,
+        "mean_arb_edge": -17.491557
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 10.618142,
+        "mean_retail_edge": 26.038577,
+        "mean_arb_edge": -15.420435
+      }
+    ]
+  },
+  {
+    "path": "strategies/mean_edge_lab/grind/trend_shock_candidates_round2/strategy_rank01_p6.687759.py",
+    "mean": 9.649816666666666,
+    "std": 2.232876789579508,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 6.687759,
+        "mean_retail_edge": 24.625081,
+        "mean_arb_edge": -17.937323
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 12.078616,
+        "mean_retail_edge": 34.109327,
+        "mean_arb_edge": -22.030711
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 10.183075,
+        "mean_retail_edge": 28.948663,
+        "mean_arb_edge": -18.765587
+      }
+    ]
+  },
+  {
+    "path": "strategies/mean_edge_lab/grind/trend_shock_candidates_round2/strategy_rank02_p6.666280.py",
+    "mean": 9.109896666666668,
+    "std": 1.7919011577013826,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 6.66628,
+        "mean_retail_edge": 16.687246,
+        "mean_arb_edge": -10.020966
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 10.913012,
+        "mean_retail_edge": 22.004138,
+        "mean_arb_edge": -11.091126
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 9.750398,
+        "mean_retail_edge": 19.927645,
+        "mean_arb_edge": -10.177247
+      }
+    ]
+  },
+  {
+    "path": "strategies/mean_edge_lab/grind/trend_shock_candidates_round2/strategy_rank03_p6.349589.py",
+    "mean": 8.706808333333333,
+    "std": 1.7603057783164326,
+    "runs": [
+      {
+        "seed_start": 0,
+        "mean_edge": 6.349589,
+        "mean_retail_edge": 16.126075,
+        "mean_arb_edge": -9.776486
+      },
+      {
+        "seed_start": 300,
+        "mean_edge": 10.578709,
+        "mean_retail_edge": 21.664919,
+        "mean_arb_edge": -11.08621
+      },
+      {
+        "seed_start": 600,
+        "mean_edge": 9.192127,
+        "mean_retail_edge": 18.95756,
+        "mean_arb_edge": -9.765433
+      }
+    ]
+  }
+]
