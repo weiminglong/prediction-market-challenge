@@ -1,0 +1,33 @@
+{
+  "skill_name": "strategy_final",
+  "status": "complete",
+  "current_experiment": 15,
+  "baseline_score": 33.3,
+  "best_score": 83.3,
+  "experiments": [
+    {"id": 0, "score": 6, "max_score": 18, "pass_rate": 33.3, "status": "baseline", "description": "original strategy — no changes"},
+    {"id": 1, "score": 9, "max_score": 18, "pass_rate": 50.0, "status": "keep", "description": "base_size 1.0 -> 1.2: retail passes"},
+    {"id": 2, "score": 9, "max_score": 18, "pass_rate": 50.0, "status": "keep", "description": "vol scale 0.6 -> 0.7"},
+    {"id": 3, "score": 9, "max_score": 18, "pass_rate": 50.0, "status": "discard", "description": "stronger fill bias: no improvement"},
+    {"id": 4, "score": 9, "max_score": 18, "pass_rate": 50.0, "status": "discard", "description": "cooldown spread ±4: arb better but retail worse"},
+    {"id": 5, "score": 11, "max_score": 18, "pass_rate": 61.1, "status": "keep", "description": "asymmetric sizing (1.3 safe, 0.8 cooldown)"},
+    {"id": 6, "score": 11, "max_score": 18, "pass_rate": 61.1, "status": "discard", "description": "cooldown size 0.5: net neutral"},
+    {"id": 7, "score": 12, "max_score": 18, "pass_rate": 66.7, "status": "keep", "description": "safe-side size 1.5: strong edge 3/3"},
+    {"id": 8, "score": 11, "max_score": 18, "pass_rate": 61.1, "status": "discard", "description": "gap-based scaling: too aggressive"},
+    {"id": 9, "score": 12, "max_score": 18, "pass_rate": 66.7, "status": "discard", "description": "momentum 0.8: marginal, reverted"},
+    {"id": 10, "score": 9, "max_score": 18, "pass_rate": 50.0, "status": "discard", "description": "late-game ±1: arb exploded to -2.07"},
+    {"id": 11, "score": 12, "max_score": 18, "pass_rate": 66.7, "status": "keep", "description": "safe-side 1.7: edge 1.07 avg"},
+    {"id": 12, "score": 14, "max_score": 18, "pass_rate": 77.8, "status": "keep", "description": "safe-side 2.0: very strong edge passes 2/3"},
+    {"id": 13, "score": 15, "max_score": 18, "pass_rate": 83.3, "status": "keep", "description": "safe-side 2.2: very strong edge 3/3, edge 1.35"},
+    {"id": 14, "score": 12, "max_score": 18, "pass_rate": 66.7, "status": "discard", "description": "inv_skew 0.10: hurt retail, reverted"},
+    {"id": 15, "score": 15, "max_score": 18, "pass_rate": 83.3, "status": "keep", "description": "vol-adaptive spread widening: arb -2.38, edge 1.38"}
+  ],
+  "eval_breakdown": [
+    {"name": "Profitable", "pass_count": 39, "total": 39},
+    {"name": "Strong edge", "pass_count": 26, "total": 39},
+    {"name": "Very strong edge", "pass_count": 8, "total": 39},
+    {"name": "Arb controlled", "pass_count": 0, "total": 39},
+    {"name": "Strong retail", "pass_count": 33, "total": 39},
+    {"name": "No failures", "pass_count": 39, "total": 39}
+  ]
+}

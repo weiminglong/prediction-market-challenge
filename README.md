@@ -20,8 +20,10 @@ it settles to `0`.
   Challenge specification and rule summary.
 - `orderbook_pm_challenge/`
   Local simulator, strategy API, CLI, and scoring implementation.
-- `examples/starter_strategy.py`
+- `strategies/starter_strategy.py`
   Minimal example strategy that uses the public participant API.
+- `strategies/strategy_final.py`
+  Optimized strategy with volatility-adaptive sizing.
 - `tests/`
   Coverage for book mechanics, simulation behavior, sandbox, and parallelism.
 
@@ -41,19 +43,19 @@ uv sync --extra scientific
 
 ```bash
 # Quick smoke run
-uv run orderbook-pm run examples/starter_strategy.py --simulations 5 --steps 100
+uv run orderbook-pm run strategies/starter_strategy.py --simulations 5 --steps 100
 
 # Full JSON output
-uv run orderbook-pm run examples/starter_strategy.py --json
+uv run orderbook-pm run strategies/starter_strategy.py --json
 
 # Parallel execution (4 workers)
-uv run orderbook-pm run examples/starter_strategy.py --workers 4
+uv run orderbook-pm run strategies/starter_strategy.py --workers 4
 
 # Sandboxed execution (restricted imports/builtins, nsjail if available)
-uv run orderbook-pm run examples/starter_strategy.py --sandbox
+uv run orderbook-pm run strategies/starter_strategy.py --sandbox
 
 # Both
-uv run orderbook-pm run examples/starter_strategy.py --sandbox --workers 4
+uv run orderbook-pm run strategies/starter_strategy.py --sandbox --workers 4
 
 # Run tests
 uv run pytest
