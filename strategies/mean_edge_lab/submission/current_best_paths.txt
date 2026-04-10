@@ -1,0 +1,6 @@
+# Current submit candidates (highest priority first).
+# These are standalone and sandbox-safe.
+
+strategies/mean_edge_lab/team_round15/strategy_team_q2_p1_holdout_guard.py
+strategies/mean_edge_lab/team_round14/strategy_team_p1_o4_toxtrend_guard.py
+strategies/mean_edge_lab/team_round13/strategy_team_o4_m2_trend_depth_asym.py

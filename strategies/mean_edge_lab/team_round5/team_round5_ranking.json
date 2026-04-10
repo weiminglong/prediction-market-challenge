@@ -1,0 +1,334 @@
+{
+  "simulations": 180,
+  "workers": 8,
+  "seed_starts": [
+    0,
+    300,
+    600
+  ],
+  "sandbox": false,
+  "rank_by_seed0": [
+    {
+      "path": "strategies/mean_edge_lab/team_round5/strategy_team_g3_convex_depth.py",
+      "seed0_mean_edge": 11.640523080719445,
+      "robust_mean_edge": 14.371907055611675,
+      "robust_edge_stddev": 2.3412408969317946,
+      "runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 11.640523080719445,
+          "mean_retail_edge": 25.4481275352061,
+          "mean_arb_edge": -13.807604454499442,
+          "mean_final_wealth": 1011.3178272222232,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 17.358330233747793,
+          "mean_retail_edge": 33.612089892389996,
+          "mean_arb_edge": -16.253759658646672,
+          "mean_final_wealth": 1017.1175077777773,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 14.11686785236779,
+          "mean_retail_edge": 28.49662111853889,
+          "mean_arb_edge": -14.379753266176667,
+          "mean_final_wealth": 1014.4115544444442,
+          "failure_count": 0
+        }
+      ]
+    },
+    {
+      "path": "strategies/mean_edge_lab/team_round5/strategy_team_g1_regime_memory.py",
+      "seed0_mean_edge": 11.488612220901109,
+      "robust_mean_edge": 14.73696207076815,
+      "robust_edge_stddev": 2.853942444971562,
+      "runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 11.488612220901109,
+          "mean_retail_edge": 22.379941921940002,
+          "mean_arb_edge": -10.891329701025553,
+          "mean_final_wealth": 1011.3294477777771,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 18.43566071416501,
+          "mean_retail_edge": 30.444043868088315,
+          "mean_arb_edge": -12.008383153936663,
+          "mean_final_wealth": 1018.0302672222219,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 14.286613277238331,
+          "mean_retail_edge": 25.54123304481002,
+          "mean_arb_edge": -11.254619767563888,
+          "mean_final_wealth": 1014.5825500000002,
+          "failure_count": 0
+        }
+      ]
+    },
+    {
+      "path": "strategies/mean_edge_lab/submission/strategy_round4_best_standalone.py",
+      "seed0_mean_edge": 11.465284798963328,
+      "robust_mean_edge": 14.721564053231852,
+      "robust_edge_stddev": 2.860062551663008,
+      "runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 11.465284798963328,
+          "mean_retail_edge": 22.384925352601115,
+          "mean_arb_edge": -10.919640553625552,
+          "mean_final_wealth": 1011.3289533333327,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 18.427544088771675,
+          "mean_retail_edge": 30.45677901496832,
+          "mean_arb_edge": -12.029234926209996,
+          "mean_final_wealth": 1018.035704444444,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 14.271863271960553,
+          "mean_retail_edge": 25.549714889215572,
+          "mean_arb_edge": -11.27785161724722,
+          "mean_final_wealth": 1014.5610205555557,
+          "failure_count": 0
+        }
+      ]
+    },
+    {
+      "path": "strategies/mean_edge_lab/team_round5/strategy_team_g4_onesided_surge.py",
+      "seed0_mean_edge": 11.407568511982774,
+      "robust_mean_edge": 14.698809734007037,
+      "robust_edge_stddev": 2.877362052341793,
+      "runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 11.407568511982774,
+          "mean_retail_edge": 22.198292504837227,
+          "mean_arb_edge": -10.790723992839439,
+          "mean_final_wealth": 1011.2866555555561,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 18.416776113519454,
+          "mean_retail_edge": 30.301138002316662,
+          "mean_arb_edge": -11.884361888808336,
+          "mean_final_wealth": 1018.0397772222219,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 14.272084576518882,
+          "mean_retail_edge": 25.393627257863336,
+          "mean_arb_edge": -11.121542681328881,
+          "mean_final_wealth": 1014.5641455555555,
+          "failure_count": 0
+        }
+      ]
+    },
+    {
+      "path": "strategies/mean_edge_lab/team_round5/strategy_team_g2_vol_pulse.py",
+      "seed0_mean_edge": 10.258721720912227,
+      "robust_mean_edge": 13.137885161756857,
+      "robust_edge_stddev": 2.4465283453987197,
+      "runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 10.258721720912227,
+          "mean_retail_edge": 19.88945529385612,
+          "mean_arb_edge": -9.630733572935558,
+          "mean_final_wealth": 1010.1077116666661,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 16.23911209940723,
+          "mean_retail_edge": 27.156926010187217,
+          "mean_arb_edge": -10.91781391078611,
+          "mean_final_wealth": 1016.0002072222223,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 12.915821664951114,
+          "mean_retail_edge": 22.773647940847777,
+          "mean_arb_edge": -9.857826275890552,
+          "mean_final_wealth": 1013.134432777778,
+          "failure_count": 0
+        }
+      ]
+    }
+  ],
+  "rank_by_robust": [
+    {
+      "path": "strategies/mean_edge_lab/team_round5/strategy_team_g1_regime_memory.py",
+      "seed0_mean_edge": 11.488612220901109,
+      "robust_mean_edge": 14.73696207076815,
+      "robust_edge_stddev": 2.853942444971562,
+      "runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 11.488612220901109,
+          "mean_retail_edge": 22.379941921940002,
+          "mean_arb_edge": -10.891329701025553,
+          "mean_final_wealth": 1011.3294477777771,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 18.43566071416501,
+          "mean_retail_edge": 30.444043868088315,
+          "mean_arb_edge": -12.008383153936663,
+          "mean_final_wealth": 1018.0302672222219,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 14.286613277238331,
+          "mean_retail_edge": 25.54123304481002,
+          "mean_arb_edge": -11.254619767563888,
+          "mean_final_wealth": 1014.5825500000002,
+          "failure_count": 0
+        }
+      ]
+    },
+    {
+      "path": "strategies/mean_edge_lab/submission/strategy_round4_best_standalone.py",
+      "seed0_mean_edge": 11.465284798963328,
+      "robust_mean_edge": 14.721564053231852,
+      "robust_edge_stddev": 2.860062551663008,
+      "runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 11.465284798963328,
+          "mean_retail_edge": 22.384925352601115,
+          "mean_arb_edge": -10.919640553625552,
+          "mean_final_wealth": 1011.3289533333327,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 18.427544088771675,
+          "mean_retail_edge": 30.45677901496832,
+          "mean_arb_edge": -12.029234926209996,
+          "mean_final_wealth": 1018.035704444444,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 14.271863271960553,
+          "mean_retail_edge": 25.549714889215572,
+          "mean_arb_edge": -11.27785161724722,
+          "mean_final_wealth": 1014.5610205555557,
+          "failure_count": 0
+        }
+      ]
+    },
+    {
+      "path": "strategies/mean_edge_lab/team_round5/strategy_team_g4_onesided_surge.py",
+      "seed0_mean_edge": 11.407568511982774,
+      "robust_mean_edge": 14.698809734007037,
+      "robust_edge_stddev": 2.877362052341793,
+      "runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 11.407568511982774,
+          "mean_retail_edge": 22.198292504837227,
+          "mean_arb_edge": -10.790723992839439,
+          "mean_final_wealth": 1011.2866555555561,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 18.416776113519454,
+          "mean_retail_edge": 30.301138002316662,
+          "mean_arb_edge": -11.884361888808336,
+          "mean_final_wealth": 1018.0397772222219,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 14.272084576518882,
+          "mean_retail_edge": 25.393627257863336,
+          "mean_arb_edge": -11.121542681328881,
+          "mean_final_wealth": 1014.5641455555555,
+          "failure_count": 0
+        }
+      ]
+    },
+    {
+      "path": "strategies/mean_edge_lab/team_round5/strategy_team_g3_convex_depth.py",
+      "seed0_mean_edge": 11.640523080719445,
+      "robust_mean_edge": 14.371907055611675,
+      "robust_edge_stddev": 2.3412408969317946,
+      "runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 11.640523080719445,
+          "mean_retail_edge": 25.4481275352061,
+          "mean_arb_edge": -13.807604454499442,
+          "mean_final_wealth": 1011.3178272222232,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 17.358330233747793,
+          "mean_retail_edge": 33.612089892389996,
+          "mean_arb_edge": -16.253759658646672,
+          "mean_final_wealth": 1017.1175077777773,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 14.11686785236779,
+          "mean_retail_edge": 28.49662111853889,
+          "mean_arb_edge": -14.379753266176667,
+          "mean_final_wealth": 1014.4115544444442,
+          "failure_count": 0
+        }
+      ]
+    },
+    {
+      "path": "strategies/mean_edge_lab/team_round5/strategy_team_g2_vol_pulse.py",
+      "seed0_mean_edge": 10.258721720912227,
+      "robust_mean_edge": 13.137885161756857,
+      "robust_edge_stddev": 2.4465283453987197,
+      "runs": [
+        {
+          "seed_start": 0,
+          "mean_edge": 10.258721720912227,
+          "mean_retail_edge": 19.88945529385612,
+          "mean_arb_edge": -9.630733572935558,
+          "mean_final_wealth": 1010.1077116666661,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 300,
+          "mean_edge": 16.23911209940723,
+          "mean_retail_edge": 27.156926010187217,
+          "mean_arb_edge": -10.91781391078611,
+          "mean_final_wealth": 1016.0002072222223,
+          "failure_count": 0
+        },
+        {
+          "seed_start": 600,
+          "mean_edge": 12.915821664951114,
+          "mean_retail_edge": 22.773647940847777,
+          "mean_arb_edge": -9.857826275890552,
+          "mean_final_wealth": 1013.134432777778,
+          "failure_count": 0
+        }
+      ]
+    }
+  ]
+}
