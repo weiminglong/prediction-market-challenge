@@ -1,6 +1,5 @@
-"""Arb-hunter v9: Multilevel quoting with arb-defended inner level.
-Outer levels capture retail safely. Inner level uses trend-based asymmetric
-sizing to reduce arb exposure while maintaining presence."""
+"""Arb-hunter v11: Multilevel (no model-boost) + stronger arb defense
+on L1 and L2, with enhanced shock detection."""
 
 from __future__ import annotations
 
@@ -13,11 +12,12 @@ class Strategy(BaseStrategy):
         self.fill_bias = 0.0
         self.prev_bid = None
         self.prev_ask = None
-        self.vol_estimate = 0.0
+        self.vol_ema = 0.0
         self.trend = 0.0
         self.shock_remaining = 0
         self.shock_sign = 0
         self.quiet_steps = 0
+        self.prev_move = 0.0
 
     def _convex_inv_shift(self, net_inv):
         if net_inv == 0.0:
@@ -54,21 +54,27 @@ class Strategy(BaseStrategy):
         if self.prev_bid is not None and self.prev_ask is not None:
             prev_mid = (self.prev_bid + self.prev_ask) / 2.0
             move = mid - prev_mid
-
-            self.vol_estimate = 0.935 * self.vol_estimate + 0.065 * abs(move)
+            self.vol_ema = 0.935 * self.vol_ema + 0.065 * abs(move)
             self.trend = 0.654 * self.trend + 0.173 * move
 
-            shock_trigger = max(1.85, 3.05 * max(self.vol_estimate, 0.355))
+            shock_trigger = max(1.85, 3.05 * max(self.vol_ema, 0.355))
             if abs(move) >= shock_trigger:
                 self.shock_remaining = 4
                 self.shock_sign = 1 if move > 0 else -1
+
+            # Early shock: consecutive same-direction accelerating moves
+            if (move * self.prev_move > 0 and abs(move) > 1.2 and
+                abs(move) > abs(self.prev_move) + 0.3):
+                self.shock_remaining = max(self.shock_remaining, 3)
+                self.shock_sign = 1 if move > 0 else -1
+
+            self.prev_move = move
 
         self.prev_bid = bid
         self.prev_ask = ask
 
         buy_qty = state.buy_filled_quantity
         sell_qty = state.sell_filled_quantity
-
         if buy_qty > 0:
             self.fill_bias -= 0.5
         if sell_qty > 0:
@@ -87,7 +93,7 @@ class Strategy(BaseStrategy):
 
         # Spread
         half_spread = 2
-        if self.vol_estimate > 1.23:
+        if self.vol_ema > 1.23:
             half_spread += 1
         if self.shock_remaining > 0:
             half_spread += 2
@@ -98,7 +104,7 @@ class Strategy(BaseStrategy):
             return actions
 
         # Sizing
-        vol_scale = max(0.064, 1.0 - self.vol_estimate * 2.4)
+        vol_scale = max(0.064, 1.0 - self.vol_ema * 2.4)
         if self.shock_remaining > 0:
             vol_scale *= 0.15
 
@@ -112,27 +118,25 @@ class Strategy(BaseStrategy):
         elif net_inv < -5.5:
             ask_size *= 0.94
 
-        # Uncovered penalty
         avail_yes = max(0.0, state.yes_inventory)
         if ask_size > avail_yes:
             uncovered = ask_size - avail_yes
             ask_size = max(min_size, avail_yes + max(0.0, uncovered * 0.88))
 
-        # === ARB DEFENSE on L1: Reduce dangerous side ===
-        direction = self.trend + self.fill_bias * 0.25
+        # === ARB DEFENSE on L1: stronger than v9 ===
+        direction = self.trend + self.fill_bias * 0.3
         dir_abs = abs(direction)
-        if dir_abs > 0.15:
-            # Moderate reduction on L1 only
-            danger_mult = max(0.35, 1.0 - dir_abs * 0.9)
+        if dir_abs > 0.12:
+            # Stronger: dir_abs=0.12->0.87, dir_abs=0.3->0.67, dir_abs=0.5->0.45
+            danger_mult = max(0.25, 1.0 - dir_abs * 1.1)
             if direction > 0:
                 ask_size *= danger_mult
             else:
                 bid_size *= danger_mult
 
-        # Cash management
-        vol_ref = max(self.vol_estimate, 0.064)
-        reserve_need = 5.0 * vol_ref
-        spendable = max(0.0, state.free_cash - reserve_need)
+        # Cash
+        vol_ref = max(self.vol_ema, 0.064)
+        spendable = max(0.0, state.free_cash - 5.0 * vol_ref)
 
         # Shock: suppress dangerous side
         if self.shock_remaining > 0:
@@ -142,11 +146,10 @@ class Strategy(BaseStrategy):
                 ask_size = 0.0
             self.shock_remaining -= 1
 
-        # L1 orders
+        # L1
         buy_cost = my_bid * 0.01 * bid_size
         if bid_size > 0.0 and buy_cost > spendable:
-            scale = spendable / max(buy_cost, 1e-12)
-            bid_size = max(min_size, bid_size * scale) if bid_size * scale >= min_size else 0.0
+            bid_size = max(min_size, bid_size * spendable / max(buy_cost, 1e-12)) if bid_size * spendable / max(buy_cost, 1e-12) >= min_size else 0.0
             buy_cost = my_bid * 0.01 * bid_size
 
         ask_px = my_ask * 0.01
@@ -174,13 +177,20 @@ class Strategy(BaseStrategy):
                 if coll_l1 > 0:
                     spendable -= coll_l1
 
-        # L2: wider spread, no arb defense needed (arb-safe at wider prices)
+        # L2 with arb defense
         l2_extra = 5
         l2_frac = 0.5
         bid_L2 = max(1, my_bid - l2_extra)
         ask_L2 = min(99, my_ask + l2_extra)
         bid_sz2 = max(min_size, bid_size * l2_frac) if bid_size > 0 else 0.0
         ask_sz2 = max(min_size, ask_size * l2_frac) if ask_size > 0 else 0.0
+
+        if dir_abs > 0.20:
+            l2_danger = max(0.45, 1.0 - dir_abs * 0.7)
+            if direction > 0:
+                ask_sz2 *= l2_danger
+            else:
+                bid_sz2 *= l2_danger
 
         if bid_sz2 > 0:
             cost2 = bid_L2 * 0.01 * bid_sz2
@@ -197,7 +207,7 @@ class Strategy(BaseStrategy):
                 if coll2 > 0:
                     spendable -= coll2
 
-        # L3: even wider
+        # L3
         l3_extra = 9
         l3_frac = 0.3
         bid_L3 = max(1, my_bid - l3_extra)
@@ -220,7 +230,7 @@ class Strategy(BaseStrategy):
                 if coll3 > 0:
                     spendable -= coll3
 
-        # L4: widest
+        # L4
         l4_extra = 14
         l4_frac = 0.15
         bid_L4 = max(1, my_bid - l4_extra)
@@ -243,7 +253,7 @@ class Strategy(BaseStrategy):
                 if coll4 > 0:
                     spendable -= coll4
 
-        # Sentinel orders in calm periods
+        # Sentinels in calm periods
         comp_spread = ask - bid
         if comp_spread >= 3 and self.quiet_steps >= 2 and self.shock_remaining <= 0:
             sent_sz = round(3.5 * vol_scale, 2)

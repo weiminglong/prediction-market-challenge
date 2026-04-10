@@ -1,4 +1,4 @@
-"""Final verification."""
+"""Model-vol boost + refinements."""
 from __future__ import annotations
 import math
 from orderbook_pm_challenge.strategy import BaseStrategy
@@ -74,7 +74,8 @@ class Strategy(BaseStrategy):
         model_vol = phi_z / max(0.01, total_sigma) * 0.02 * 100.0
         model_vol = max(0.05, min(8.0, model_vol))
 
-        half_spread = 2
+        # Model-vol adaptive spread: 1-tick when vol is very low (safe at extremes)
+        half_spread = 1 if model_vol < 0.2 else 2
         if self.vol_ema > 1.2: half_spread += 1
         if self.shock_remaining > 0: half_spread += 2
 

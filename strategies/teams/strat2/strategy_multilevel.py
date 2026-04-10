@@ -37,7 +37,7 @@ class Strategy(BaseStrategy):
         "spread_vol_threshold": 1.23,
         "trend_alpha": 0.173,
         "trend_decay": 0.654,
-        "trend_weight": 1.0,
+        "trend_weight": 1.3,
         "vol_coeff": 2.4,
         "vol_decay": 0.935,
         "vol_floor": 0.064,
@@ -50,7 +50,7 @@ class Strategy(BaseStrategy):
         "l3_size_frac": 0.3,
         "l4_spread_extra": 14,
         "l4_size_frac": 0.15,
-        "sentinel_size": 0.0,
+        "sentinel_size": 3.5,
         "sentinel_min_spread": 3,
         "sentinel_quiet_steps": 2,
     }
