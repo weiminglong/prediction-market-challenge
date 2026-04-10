@@ -10,3 +10,4 @@ venv/
 htmlcov/
 *.egg-info/
 .worktrees/
+strategies/archive/**/*.json
