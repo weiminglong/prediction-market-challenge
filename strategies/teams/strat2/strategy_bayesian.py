@@ -13,13 +13,13 @@ def _tick_to_price(price_ticks: int) -> float:
 class Strategy(BaseStrategy):
     # Round4 params as baseline, with direction-aware additions
     PARAMS = {
-        "base_size": 18.0,
+        "base_size": 14.1,
         "fill_decay": 0.59,
         "fill_hit": 0.50,
         "inv_skew": 0.028,
         "inv_soft": 4.6,
         "inv_edge_mult": 0.015,
-        "max_inventory": 12.0,
+        "max_inventory": 8.7,
         "min_size": 0.55,
         "side_damp_soft": 5.5,
         "damp_bid_when_long": 0.94,
@@ -37,7 +37,7 @@ class Strategy(BaseStrategy):
         "trend_alpha": 0.17,
         "trend_decay": 0.65,
         "trend_weight": 1.0,
-        "vol_coeff": 1.5,
+        "vol_coeff": 2.4,
         "vol_decay": 0.935,
         "vol_floor": 0.065,
         "reserve_cash_base": 0.0,
@@ -49,6 +49,14 @@ class Strategy(BaseStrategy):
         "dir_safe_mult": 1.0,
         "dir_risky_mult": 0.8,
         "dir_clamp": 1.5,
+        # Multi-level quoting
+        "l2_spread_extra": 5,
+        "l2_size_frac": 0.0,
+        "l3_spread_extra": 9,
+        "l3_size_frac": 0.0,
+        "sentinel_size": 0.0,
+        "sentinel_min_spread": 3,
+        "sentinel_quiet_steps": 2,
     }
 
     def __init__(self):
@@ -60,6 +68,7 @@ class Strategy(BaseStrategy):
         self.shock_remaining = 0
         self.shock_sign = 0
         self.arb_direction = 0.0
+        self.quiet_steps = 0
 
     def _convex_inv_shift(self, net_inv: float) -> float:
         p = self.PARAMS
@@ -137,6 +146,15 @@ class Strategy(BaseStrategy):
             self.fill_bias += fill_hit
             self.arb_direction += state.sell_filled_quantity * p["dir_fill_weight"]
         self.fill_bias *= p["fill_decay"]
+
+        # Track quiet periods for sentinels
+        buy_qty = state.buy_filled_quantity
+        sell_qty = state.sell_filled_quantity
+        arb_like = (buy_qty > 1.0 and sell_qty < 0.5) or (sell_qty > 1.0 and buy_qty < 0.5)
+        if not arb_like and (buy_qty + sell_qty) < 0.5:
+            self.quiet_steps += 1
+        else:
+            self.quiet_steps = 0
 
         # --- Fair value ---
         net_inv = state.yes_inventory - state.no_inventory
@@ -234,9 +252,84 @@ class Strategy(BaseStrategy):
                 else:
                     ask_size = max(min_size, new_ask)
 
-        # --- Place orders ---
+        # --- L1 orders ---
         if bid_size >= 0.01 and buy_cost <= state.free_cash and buy_cost <= spendable + 1e-6:
             actions.append(PlaceOrder(side=Side.BUY, price_ticks=my_bid, quantity=bid_size))
+            spendable -= buy_cost
         if ask_size >= 0.01:
-            actions.append(PlaceOrder(side=Side.SELL, price_ticks=my_ask, quantity=ask_size))
+            cov_l1 = min(ask_size, avail_yes)
+            unc_l1 = max(0.0, ask_size - cov_l1)
+            coll_l1 = one_m_ask * unc_l1
+            if coll_l1 <= spendable + 1e-9:
+                actions.append(PlaceOrder(side=Side.SELL, price_ticks=my_ask, quantity=ask_size))
+                avail_yes = max(0.0, avail_yes - ask_size)
+                if coll_l1 > 0:
+                    spendable -= coll_l1
+
+        # --- L2 orders: wider spread, smaller size ---
+        l2_extra = int(p["l2_spread_extra"])
+        l2_frac = p["l2_size_frac"]
+        bid_L2 = max(1, my_bid - l2_extra)
+        ask_L2 = min(99, my_ask + l2_extra)
+        bid_sz2 = max(min_size, bid_size * l2_frac) if bid_size > 0 else 0.0
+        ask_sz2 = max(min_size, ask_size * l2_frac) if ask_size > 0 else 0.0
+
+        if bid_sz2 > 0:
+            cost2 = bid_L2 * 0.01 * bid_sz2
+            if cost2 <= spendable:
+                actions.append(PlaceOrder(side=Side.BUY, price_ticks=bid_L2, quantity=bid_sz2))
+                spendable -= cost2
+        if ask_sz2 > 0:
+            cov2 = min(ask_sz2, avail_yes)
+            unc2 = max(0.0, ask_sz2 - cov2)
+            coll2 = (1.0 - ask_L2 * 0.01) * unc2
+            if coll2 <= spendable + 1e-9:
+                actions.append(PlaceOrder(side=Side.SELL, price_ticks=ask_L2, quantity=ask_sz2))
+                avail_yes = max(0.0, avail_yes - ask_sz2)
+                if coll2 > 0:
+                    spendable -= coll2
+
+        # --- L3 orders: even wider, smaller ---
+        l3_extra = int(p["l3_spread_extra"])
+        l3_frac = p["l3_size_frac"]
+        bid_L3 = max(1, my_bid - l3_extra)
+        ask_L3 = min(99, my_ask + l3_extra)
+        bid_sz3 = max(min_size, bid_size * l3_frac) if bid_size > 0 else 0.0
+        ask_sz3 = max(min_size, ask_size * l3_frac) if ask_size > 0 else 0.0
+
+        if bid_sz3 > 0:
+            cost3 = bid_L3 * 0.01 * bid_sz3
+            if cost3 <= spendable:
+                actions.append(PlaceOrder(side=Side.BUY, price_ticks=bid_L3, quantity=bid_sz3))
+                spendable -= cost3
+        if ask_sz3 > 0:
+            cov3 = min(ask_sz3, avail_yes)
+            unc3 = max(0.0, ask_sz3 - cov3)
+            coll3 = (1.0 - ask_L3 * 0.01) * unc3
+            if coll3 <= spendable + 1e-9:
+                actions.append(PlaceOrder(side=Side.SELL, price_ticks=ask_L3, quantity=ask_sz3))
+                avail_yes = max(0.0, avail_yes - ask_sz3)
+                if coll3 > 0:
+                    spendable -= coll3
+
+        # --- Sentinel orders inside competitor spread during calm periods ---
+        comp_spread = ask - bid
+        if (comp_spread >= int(p["sentinel_min_spread"])
+                and self.quiet_steps >= int(p["sentinel_quiet_steps"])
+                and self.shock_remaining <= 0):
+            sent_sz = p["sentinel_size"] * vol_scale
+            tick_b = max(1, bid + 1)
+            sz_b = max(0.1, sent_sz * max(0.0, 1.0 - net_inv / max_inv))
+            cost_b = tick_b * 0.01 * sz_b
+            if sz_b > 0.1 and cost_b <= spendable:
+                actions.append(PlaceOrder(side=Side.BUY, price_ticks=tick_b, quantity=sz_b))
+                spendable -= cost_b
+            tick_a = min(99, ask - 1)
+            sz_a = max(0.1, sent_sz * max(0.0, 1.0 + net_inv / max_inv))
+            cov_s = min(sz_a, avail_yes)
+            unc_s = max(0.0, sz_a - cov_s)
+            coll_s = (1.0 - tick_a * 0.01) * unc_s
+            if sz_a > 0.1 and coll_s <= spendable + 1e-9:
+                actions.append(PlaceOrder(side=Side.SELL, price_ticks=tick_a, quantity=sz_a))
+
         return actions
