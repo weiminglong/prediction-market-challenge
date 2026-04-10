@@ -1,4 +1,4 @@
-"""Arch base + multi-level: ±1 (size 0.5 calm only) + ±2 (size 10)."""
+"""Time-adaptive: reduce size in last 500 steps (late game more volatile/risky)."""
 
 from __future__ import annotations
 from orderbook_pm_challenge.strategy import BaseStrategy
@@ -44,34 +44,26 @@ class Strategy(BaseStrategy):
 
         fair = mid + self.fill_bias + inv_skew
 
+        vol_widen = 1 if self.vol_estimate > 1.0 else 0
+        my_bid = max(1, int(round(fair - 2 - vol_widen)))
+        my_ask = min(99, int(round(fair + 2 + vol_widen)))
+
+        if my_bid >= my_ask:
+            return actions
+
         vol_scale = max(0.1, 1.0 - self.vol_estimate * 1.5)
+
+        # Time-adaptive: full size early, reduced size in last 500 steps
+        time_scale = 1.0 if state.steps_remaining > 500 else max(0.3, state.steps_remaining / 500)
+        base_size = 10.0
         max_inv = 10
+        bid_size = max(0.2, base_size * vol_scale * time_scale * max(0.0, 1.0 - net_inv / max_inv))
+        ask_size = max(0.2, base_size * vol_scale * time_scale * max(0.0, 1.0 + net_inv / max_inv))
 
-        cash_remaining = state.free_cash
+        cost = my_bid * 0.01 * bid_size
+        if cost <= state.free_cash:
+            actions.append(PlaceOrder(side=Side.BUY, price_ticks=my_bid, quantity=bid_size))
 
-        # Inner level: ±1, tiny size 0.5 (only when calm)
-        if self.vol_estimate < 0.3:
-            inner_bid = max(1, int(round(fair - 1)))
-            inner_ask = min(99, int(round(fair + 1)))
-            if inner_bid < inner_ask:
-                cost = inner_bid * 0.01 * 0.5
-                if cost <= cash_remaining:
-                    actions.append(PlaceOrder(side=Side.BUY, price_ticks=inner_bid, quantity=0.5))
-                    cash_remaining -= cost
-                actions.append(PlaceOrder(side=Side.SELL, price_ticks=inner_ask, quantity=0.5))
-
-        # Outer level: ±2, size 10
-        my_bid = max(1, int(round(fair - 2)))
-        my_ask = min(99, int(round(fair + 2)))
-
-        if my_bid < my_ask:
-            bid_size = max(0.2, 10.0 * vol_scale * max(0.0, 1.0 - net_inv / max_inv))
-            ask_size = max(0.2, 10.0 * vol_scale * max(0.0, 1.0 + net_inv / max_inv))
-
-            cost = my_bid * 0.01 * bid_size
-            if cost <= cash_remaining:
-                actions.append(PlaceOrder(side=Side.BUY, price_ticks=my_bid, quantity=bid_size))
-
-            actions.append(PlaceOrder(side=Side.SELL, price_ticks=my_ask, quantity=ask_size))
+        actions.append(PlaceOrder(side=Side.SELL, price_ticks=my_ask, quantity=ask_size))
 
         return actions

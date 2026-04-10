@@ -1,4 +1,4 @@
-"""Arch base + inner ±1 only on inventory-reducing side + ±2 outer."""
+"""arch_v29 base + zero filled side for 1 step, boost safe to 12."""
 
 from __future__ import annotations
 from orderbook_pm_challenge.strategy import BaseStrategy
@@ -11,6 +11,8 @@ class Strategy(BaseStrategy):
         self.prev_bid = None
         self.prev_ask = None
         self.vol_estimate = 0.0
+        self.skip_bid = False
+        self.skip_ask = False
 
     def on_step(self, state: StepState):
         actions = [CancelAll()]
@@ -33,10 +35,15 @@ class Strategy(BaseStrategy):
         self.prev_bid = bid
         self.prev_ask = ask
 
+        # Track fills -> skip that side next step
+        new_skip_bid = False
+        new_skip_ask = False
         if state.buy_filled_quantity > 0:
-            self.fill_bias -= 1.0
+            self.fill_bias -= 1.5
+            new_skip_bid = True
         if state.sell_filled_quantity > 0:
-            self.fill_bias += 1.0
+            self.fill_bias += 1.5
+            new_skip_ask = True
         self.fill_bias *= 0.4
 
         net_inv = state.yes_inventory - state.no_inventory
@@ -44,40 +51,37 @@ class Strategy(BaseStrategy):
 
         fair = mid + self.fill_bias + inv_skew
 
+        vol_widen = 1 if self.vol_estimate > 1.0 else 0
+        my_bid = max(1, int(round(fair - 2 - vol_widen)))
+        my_ask = min(99, int(round(fair + 2 + vol_widen)))
+
+        if my_bid >= my_ask:
+            self.skip_bid = new_skip_bid
+            self.skip_ask = new_skip_ask
+            return actions
+
         vol_scale = max(0.1, 1.0 - self.vol_estimate * 1.5)
         max_inv = 10
 
-        cash_remaining = state.free_cash
-
-        # Inner ±1: ONLY on reducing side
-        inner_bid = max(1, int(round(fair - 1)))
-        inner_ask = min(99, int(round(fair + 1)))
-
-        if inner_bid < inner_ask:
-            if net_inv > 1:
-                inner_size = round(min(3.0, net_inv * 0.3) * vol_scale, 1)
-                if inner_size >= 0.2:
-                    actions.append(PlaceOrder(side=Side.SELL, price_ticks=inner_ask, quantity=inner_size))
-            elif net_inv < -1:
-                inner_size = round(min(3.0, abs(net_inv) * 0.3) * vol_scale, 1)
-                if inner_size >= 0.2:
-                    cost = inner_bid * 0.01 * inner_size
-                    if cost <= cash_remaining:
-                        actions.append(PlaceOrder(side=Side.BUY, price_ticks=inner_bid, quantity=inner_size))
-                        cash_remaining -= cost
-
-        # Outer ±2, size 10
-        my_bid = max(1, int(round(fair - 2)))
-        my_ask = min(99, int(round(fair + 2)))
-
-        if my_bid < my_ask:
+        if self.skip_bid:
+            bid_size = 0.0
+            ask_size = 12.0 * vol_scale * max(0.0, 1.0 + net_inv / max_inv)
+        elif self.skip_ask:
+            bid_size = 12.0 * vol_scale * max(0.0, 1.0 - net_inv / max_inv)
+            ask_size = 0.0
+        else:
             bid_size = max(0.2, 10.0 * vol_scale * max(0.0, 1.0 - net_inv / max_inv))
             ask_size = max(0.2, 10.0 * vol_scale * max(0.0, 1.0 + net_inv / max_inv))
 
+        self.skip_bid = new_skip_bid
+        self.skip_ask = new_skip_ask
+
+        if bid_size > 0.05:
             cost = my_bid * 0.01 * bid_size
-            if cost <= cash_remaining:
+            if cost <= state.free_cash:
                 actions.append(PlaceOrder(side=Side.BUY, price_ticks=my_bid, quantity=bid_size))
 
+        if ask_size > 0.05:
             actions.append(PlaceOrder(side=Side.SELL, price_ticks=my_ask, quantity=ask_size))
 
         return actions
