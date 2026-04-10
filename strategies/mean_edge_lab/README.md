@@ -1,51 +1,55 @@
 # Mean Edge Strategy Lab
 
-This directory is a shared workspace for parallel strategy exploration.
-It keeps all standalone strategy variants, grinder scripts, team rounds,
-and promoted submission candidates in one place.
+Shared workspace for parallel strategy exploration and benchmarking.
 
-## Current Best Strategy
+It contains:
+- standalone strategy candidates (by round),
+- benchmark artifacts (`*.json`) for reproducibility,
+- and submission-ready path guidance for fast handoff.
 
-- Primary submit file: `submission/strategy_round4_best_standalone.py`
-- Latest verified metrics (200 sims, 8 workers):
-  - `seed_start=0`: `Mean Edge 10.728356`
-  - `seed_start=300`: `Mean Edge 17.437226`
-  - `seed_start=600`: `Mean Edge 14.107487`
-- Sandbox-safe (no local project imports beyond `orderbook_pm_challenge.strategy`
-  and `orderbook_pm_challenge.types`).
+## Current Submission Candidates
+
+Use these in priority order:
+
+1. `team_round15/strategy_team_q2_p1_holdout_guard.py` (current fast-round winner)
+2. `team_round14/strategy_team_p1_o4_toxtrend_guard.py` (conservative holdout fallback)
+3. `team_round13/strategy_team_o4_m2_trend_depth_asym.py` (stable baseline fallback)
+
+Recent fast mixed checks (`seed_start=0,300,900`, 100 sims each):
+- `q2`: robust mean `36.586164`
+- `p1`: robust mean `36.482608`
+- `o4`: robust mean `36.479582`
 
 ## Directory Layout
 
 - `submission/`
-  - Stable standalone strategies ready for handoff/submission.
+  - Stable handoff files and default benchmark candidate lists.
+- `team_round5/` ... `team_round17/`
+  - Parallel round outputs (strategies + ranking artifacts).
 - `team_round3/`, `team_round4/`
-  - Parallel agent outputs and ranking artifacts per round.
-- `team_directions/`
-  - Earlier team architecture explorations.
+  - Earlier team rounds.
 - `grind/`
-  - Search/tuning scripts plus exported candidate files and result artifacts.
-- `directions/`
-  - Architecture-level direction prototypes.
-- `optimize.py`, `explore_directions.py`
-  - Generic exploration drivers from early lab phases.
+  - Search/tuning scripts and historical artifacts.
+- `directions/`, `team_directions/`
+  - Earlier architecture exploration phases.
 
-## Parallel Agent Workflow
+## Evaluation Protocol
 
-1. Pick a unique output path (example: `team_round5/strategy_team_g2_<theme>.py`).
-2. Keep strategy standalone:
-   - Allowed imports should stay within `orderbook_pm_challenge.strategy`,
-     `orderbook_pm_challenge.types`, and stdlib.
-3. Run baseline eval:
-   - `uv run orderbook-pm run <strategy_path> --simulations 200 --workers 8 --seed-start 0`
-4. Run robustness eval:
-   - repeat for `--seed-start 300` and `--seed-start 600`
-5. Run sandbox compatibility check:
-   - `uv run orderbook-pm run <strategy_path> --simulations 200 --workers 8 --seed-start 0 --sandbox`
-6. Record results in the corresponding team round ranking JSON.
-7. Promote winners into `submission/` as standalone files.
+Quick screen:
+- `uv run python strategies/mean_edge_lab/compare_strategies.py <paths...> --simulations 100 --workers 8 --seed-starts 0,300`
 
-## Notes
+Fast holdout check:
+- `uv run python strategies/mean_edge_lab/compare_strategies.py <paths...> --simulations 120 --workers 8 --seed-starts 900,1200`
 
-- Strategy files that import local helper modules can fail sandbox mode.
-- Grinder and ranking JSON artifacts are intentionally kept for reproducibility.
-- If multiple agents are active, never write to another agent's output file.
+Mixed anti-overfit tie-break:
+- `uv run python strategies/mean_edge_lab/compare_strategies.py <paths...> --simulations 100 --workers 8 --seed-starts 0,300,900`
+
+Sandbox smoke:
+- `uv run orderbook-pm run <strategy_path> --sandbox --simulations 10 --json`
+
+## Rules for New Strategies
+
+- Keep files standalone for sandbox compatibility:
+  - allowed imports: `orderbook_pm_challenge.strategy`, `orderbook_pm_challenge.types`, stdlib.
+- Do not overwrite other agent outputs.
+- Store ranking JSONs with the corresponding round folder.
