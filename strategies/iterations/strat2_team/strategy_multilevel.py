@@ -20,7 +20,7 @@ class Strategy(BaseStrategy):
         "inv_skew": 0.028,
         "inv_soft": 4.6,
         "inv_edge_mult": 0.016,
-        "max_inventory": 10.0,
+        "max_inventory": 8.7,
         "min_size": 0.55,
         "side_damp_soft": 5.5,
         "damp_bid_when_long": 0.94,
@@ -50,7 +50,7 @@ class Strategy(BaseStrategy):
         "l3_size_frac": 0.3,
         "l4_spread_extra": 14,
         "l4_size_frac": 0.15,
-        "sentinel_size": 3.5,
+        "sentinel_size": 0.0,
         "sentinel_min_spread": 3,
         "sentinel_quiet_steps": 2,
     }
