@@ -13,13 +13,13 @@ def _tick_to_price(price_ticks: int) -> float:
 class Strategy(BaseStrategy):
     # Round4 params as baseline, with direction-aware additions
     PARAMS = {
-        "base_size": 14.1,
+        "base_size": 18.0,
         "fill_decay": 0.59,
         "fill_hit": 0.50,
         "inv_skew": 0.028,
         "inv_soft": 4.6,
         "inv_edge_mult": 0.015,
-        "max_inventory": 8.7,
+        "max_inventory": 12.0,
         "min_size": 0.55,
         "side_damp_soft": 5.5,
         "damp_bid_when_long": 0.94,
@@ -37,7 +37,7 @@ class Strategy(BaseStrategy):
         "trend_alpha": 0.17,
         "trend_decay": 0.65,
         "trend_weight": 1.0,
-        "vol_coeff": 2.4,
+        "vol_coeff": 1.5,
         "vol_decay": 0.935,
         "vol_floor": 0.065,
         "reserve_cash_base": 0.0,

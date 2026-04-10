@@ -82,7 +82,7 @@ class Strategy(BaseStrategy):
         my_ask = min(99, int(round(fair + half_spread)))
         if my_bid >= my_ask: return actions
 
-        model_boost = max(0.5, min(3.0, 1.0 / max(0.3, model_vol)))
+        model_boost = max(0.5, min(3.5, 1.0 / max(0.3, model_vol)))
         base_size = 12.0 * model_boost
         vol_scale = max(0.06, 1.0 - self.vol_ema * 2.4)
         if self.shock_remaining > 0: vol_scale *= 0.15
